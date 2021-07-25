@@ -19,11 +19,12 @@ export default ({ command, mode }) => {
           external: ['vue'],
           output: {
             globals: {
-              vue: 'Vue'
-            }
-          }
+              vue: 'Vue',
+            },
+            exports: 'named',
+          },
         },
-        sourcemap: true
+        sourcemap: true,
       },
       plugins: [vue()],
     };

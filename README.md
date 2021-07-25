@@ -292,6 +292,8 @@ export default defineComponent({
 
 ### BugMessage
 ```
+import {BugMessage} from 'bugui';
+
 BugMessage.info(text: string, html = false);
 BugMessage.warn(text: string, html = false);
 BugMessage.error(text: string, html = false);
@@ -300,6 +302,8 @@ BugMessage.success(text: string, html = false);
 
 ### BugConfirm
 ```
+import {BugConfirm} from 'bugui';
+
 BugConfirm(title: string): Promise<void>;
 ```
 

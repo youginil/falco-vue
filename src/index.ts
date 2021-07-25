@@ -20,8 +20,6 @@ import BugTextarea from './components/BugTextarea.vue';
 import BugFormItem from './components/BugFormItem.vue';
 import BugTooltip from './components/BugTooltip.vue';
 
-import directives from './directives';
-
 import BugMessage from './global/message';
 import './global/message.scss';
 import BugConfirm from './global/confirm';
@@ -57,9 +55,6 @@ export default {
     components.forEach((com) => {
       app.component(com.name, com);
     });
-    for (const id in directives) {
-      app.directive(id, directives[id]);
-    }
   },
 };
 
