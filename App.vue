@@ -1,6 +1,6 @@
 <template>
   <div class="tc">
-    <bug-button @click="onTrigger">Hello</bug-button>
+    <bug-button type="primary" @click="onTrigger">Hello</bug-button>
   </div>
 </template>
 
@@ -16,13 +16,13 @@ export default defineComponent({
     const options = ref([
       {
         value: 1,
-        label: 'John'
+        label: 'John',
       },
       {
         value: 2,
-        label: 'Lily'
-      }
-    ])
+        label: 'Lily',
+      },
+    ]);
     const onTrigger = (a: unknown, b: unknown) => {
       BugConfirm('Delete the user?').then(() => {
         console.log('OK');
@@ -37,7 +37,7 @@ export default defineComponent({
       onTrigger2,
       value,
       show,
-      options
+      options,
     };
   },
 });

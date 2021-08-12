@@ -93,7 +93,7 @@ button {
     background-color: #2ea44f;
     border-color: rgba(27, 31, 35, 0.15);
     color: #fff;
-    &:not(:diabled):hover {
+    &:not(:disabled):hover {
       background-color: #2c974b;
     }
     &:not(:disabled):focus {

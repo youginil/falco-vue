@@ -20,8 +20,19 @@ type MessageItem = {
 
 const GAP = 20;
 
-const container: HTMLDivElement = document.createElement('div');
-document.body.appendChild(container);
+let container: HTMLDivElement;
+
+function init() {
+  container = document.createElement('div');
+  document.body.appendChild(container);
+}
+if (document.body) {
+  init();
+} else {
+  document.addEventListener('DOMContentLoaded', () => {
+    init();
+  });
+}
 
 const messages: MessageItem[] = [];
 
