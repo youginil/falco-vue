@@ -1,4 +1,3 @@
-import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 const path = require('path');
 
@@ -27,6 +26,7 @@ export default ({ command, mode }) => {
         sourcemap: true,
       },
       plugins: [vue()],
+      rollupOptions: {},
     };
   } else {
     throw new Error('Invalid command');

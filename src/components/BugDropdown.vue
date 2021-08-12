@@ -37,14 +37,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style lang="scss">
-@import '../styles/var';
-
-.bug-dropdown {
-  color: $font-primary-color;
-  padding: 4px 0;
-  border-radius: 6px;
-  overflow: hidden;
-}
-</style>

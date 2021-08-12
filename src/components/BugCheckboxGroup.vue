@@ -80,20 +80,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="scss">
-.bug-checkbox-group {
-  display: inline-block;
-  > li {
-    display: inline-block;
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
-  }
-
-  &.vertical > li {
-    display: block;
-    margin-right: 0;
-  }
-}
-</style>

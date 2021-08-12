@@ -13,15 +13,15 @@ export default defineComponent({
   props: {
     target: {
       type: String,
-      default: ''
+      default: '',
     },
     right: {
       type: Number,
-      default: 100
+      default: 100,
     },
     bottom: {
       type: Number,
-      default: 100
+      default: 100,
     },
   },
   setup(props) {
@@ -73,43 +73,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="scss">
-.bug-backtop {
-  display: inline-flex;
-  width: 40px;
-  height: 40px;
-  background-color: #eee;
-  border-radius: 50%;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  align-items: center;
-  justify-content: center;
-  &::before {
-    content: '';
-    display: inline-block;
-    border-bottom: 8px solid #aaa;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-  }
-  &:hover {
-    background-color: #ccc;
-  }
-}
-.bug-backtop-enter,
-.bug-backtop-leave-to {
-  opacity: 0;
-}
-.bug-backtop-enter-to,
-.bug-backtop-leave {
-  opacity: 1;
-}
-.bug-backtop-enter-active,
-.bug-backtop-leave-active {
-  transition: opacity 0.3s ease;
-}
-</style>

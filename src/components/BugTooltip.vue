@@ -24,9 +24,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="scss">
-.bug-tooltip {
-  color: #fff;
-}
-</style>

@@ -7,6 +7,7 @@ import BugDate from './components/BugDate.vue';
 import BugDropdown from './components/BugDropdown.vue';
 import BugDropdownItem from './components/BugDropdownItem.vue';
 import BugInput from './components/BugInput.vue';
+import BugLoading from './components/BugLoading.vue';
 import BugModal from './components/BugModal.vue';
 import BugPagination from './components/BugPagination.vue';
 import BugPopover from './components/BugPopover.vue';
@@ -21,11 +22,7 @@ import BugFormItem from './components/BugFormItem.vue';
 import BugTooltip from './components/BugTooltip.vue';
 
 import BugMessage from './global/message';
-import './global/message.scss';
 import BugConfirm from './global/confirm';
-
-import './styles/normalize.scss';
-import './styles/shorthand.scss';
 
 const components = [
   BugBacktop,
@@ -36,6 +33,7 @@ const components = [
   BugDropdown,
   BugDropdownItem,
   BugInput,
+  BugLoading,
   BugModal,
   BugPagination,
   BugPopover,

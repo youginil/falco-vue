@@ -25,18 +25,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="scss">
-@import '../styles/var';
-
-.bug-dropdown-item {
-  line-height: 1.5;
-  padding: 4px 8px 4px 16px;
-  color: $font-primary-color;
-  cursor: pointer;
-  &:hover {
-    background-color: #0366d6;
-    color: #fff;
-  }
-}
-</style>

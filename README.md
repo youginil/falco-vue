@@ -132,6 +132,11 @@ export default defineComponent {
 |blur         |             |Blur event                                              |
 |enter        |             |When Enter is pressed                                   |
 
+### BugLoading
+|Prop       |Type      |Required  |Default   |Description                                               |
+|-----------|----------|----------|----------|----------------------------------------------------------|
+|tip        |string    |N         |""        |Loaing tip                                                |
+
 ### BugModal
 |Prop       |Type           |Required  |Default   |Description                                               |
 |-----------|---------------|----------|----------|----------------------------------------------------------|

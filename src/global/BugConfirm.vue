@@ -33,10 +33,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="scss">
-.bug-confirm-title {
-  font-size: 16px;
-  margin-bottom: 15px;
-}
-</style>
