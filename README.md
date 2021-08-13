@@ -2,6 +2,8 @@
 
 A simple efficient web component library base on Vue 3.
 
+[Document](https://yinliguo.github.io/bugui)
+
 ## Basic usage
 ```
 import BugUI from 'bugui';
@@ -15,6 +17,3 @@ createApp(App).use(BugUI).mount('#app');
 ```
 import './node_modules/bugui/dist/themes/neumorphism.css';
 ```
-
-## Document
-[Full document](https://yinliguo.github.io/bugui)

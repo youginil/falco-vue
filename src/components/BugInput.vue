@@ -60,9 +60,10 @@ export default defineComponent({
     });
 
     const oninput = () => {
+      const v = input.value.value;
       if (props.type === 'number') {
         // 把全角的数字转化成半角。65296 - 全角的0；65305 - 全角的9
-        const n = [...`${input.value.value}`]
+        const n = [...`${v}`]
           .map((char) => {
             const code = char.charCodeAt(0);
             if (code >= 65296 && code <= 65305) {
@@ -72,9 +73,11 @@ export default defineComponent({
           })
           .join('');
         input.value.value = n;
+        emit('update:modelValue', n);
         emit('change', n);
       } else {
-        emit('change', input.value.value);
+        emit('update:modelValue', v);
+        emit('change', v);
       }
     };
 
@@ -92,7 +95,6 @@ export default defineComponent({
       const elem = input.value;
       if (!props.disabled && /(^\s+|\s+$)/.test(`${elem.value}`)) {
         elem.value = `${elem.value}`.trim();
-        emit('change', elem.value);
       }
       emit('blur', e);
     };

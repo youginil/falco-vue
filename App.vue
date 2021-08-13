@@ -1,6 +1,6 @@
 <template>
   <div class="tc">
-    <bug-button type="primary" @click="onTrigger">Hello</bug-button>
+    <bug-input v-model="value" @blur="onTrigger"></bug-input>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import { BugConfirm, BugMessage } from './src';
 export default defineComponent({
   name: 'App',
   setup() {
-    const value = ref(1);
+    const value = ref('');
     const show = ref(true);
     const options = ref([
       {
@@ -24,9 +24,7 @@ export default defineComponent({
       },
     ]);
     const onTrigger = (a: unknown, b: unknown) => {
-      BugConfirm('Delete the user?').then(() => {
-        console.log('OK');
-      });
+      console.log(1);
     };
     const onTrigger2 = () => {
       //
