@@ -16,11 +16,11 @@ function compileStyle(src, dst) {
 
 const list = [
   {
-    src: path.resolve(__dirname, 'src/themes/default.scss'),
+    src: path.resolve(__dirname, 'src/themes/default/index.scss'),
     dst: path.resolve(__dirname, 'dist/themes/default.css'),
   },
   {
-    src: path.resolve(__dirname, 'src/themes/neumorphism.scss'),
+    src: path.resolve(__dirname, 'src/themes/neumorphism/index.scss'),
     dst: path.resolve(__dirname, 'dist/themes/neumorphism.css'),
   },
 ];

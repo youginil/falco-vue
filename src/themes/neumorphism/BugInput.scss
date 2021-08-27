@@ -1,0 +1,20 @@
+.bug-input {
+  display: inline-block;
+  width: 150px;
+  input {
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 22px;
+    outline: none;
+    padding: 5px 12px;
+    width: 100%;
+    background: #ebecf0;
+    box-shadow: inset 3px 3px 6px #c8c9cc, inset -3px -3px 6px #ffffff;
+    &::placeholder {
+      color: #a3aab1;
+    }
+    &:disabled {
+      color: #959da5;
+    }
+  }
+}

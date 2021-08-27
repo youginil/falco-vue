@@ -1,0 +1,13 @@
+.bug-tabs {
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+
+  &.vertical {
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-bottom: none;
+    border-right: 1px solid #ddd;
+  }
+}

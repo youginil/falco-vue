@@ -1,6 +1,10 @@
 <template>
   <div class="tc">
-    <bug-input v-model="value" @blur="onTrigger"></bug-input>
+    <bug-tabs v-model="value" @change="trigger">
+      <bug-tab-pane :key="1">Apple</bug-tab-pane>
+      <bug-tab-pane :key="2">Orange</bug-tab-pane>
+      <bug-tab-pane :key="3">Banana</bug-tab-pane>
+    </bug-tabs>
   </div>
 </template>
 
@@ -11,31 +15,14 @@ import { BugConfirm, BugMessage } from './src';
 export default defineComponent({
   name: 'App',
   setup() {
-    const value = ref('');
-    const show = ref(true);
-    const options = ref([
-      {
-        value: 1,
-        label: 'John',
-      },
-      {
-        value: 2,
-        label: 'Lily',
-      },
-    ]);
-    const onTrigger = (a: unknown, b: unknown) => {
-      console.log(1);
-    };
-    const onTrigger2 = () => {
-      //
-    };
+    const value = ref(1);
+    function trigger(a: unknown) {
+      console.log('trigger', a);
+    }
 
     return {
-      onTrigger,
-      onTrigger2,
       value,
-      show,
-      options,
+      trigger
     };
   },
 });

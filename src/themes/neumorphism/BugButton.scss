@@ -1,0 +1,109 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.bug-button {
+  position: relative;
+  background-color: #ebecf0;
+  border-radius: 6px;
+  box-shadow: 3px 3px 6px #c8c9cc, -3px -3px 6px #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  outline: none;
+  padding: 5px 16px;
+  transition: all 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  white-space: nowrap;
+  text-align: center;
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    background: linear-gradient(145deg, #d4d4d8, #fbfdff);
+    box-shadow: 3px 3px 6px #c8c9cc, -3px -3px 6px #ffffff;
+  }
+
+  &:not(:disabled):active {
+    background: #ebecf0;
+    box-shadow: inset 3px 3px 6px #c8c9cc, inset -3px -3px 6px #ffffff;
+  }
+
+  &:disabled {
+    box-shadow: none;
+    color: #959da5;
+    cursor: default;
+  }
+
+  &.btn-primary {
+    border-color: rgba(27, 31, 35, 0.15);
+    color: #2ea44f;
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
+      color: #2c974b;
+    }
+
+    &:not(:disabled):active {
+      color: #2a8f47;
+    }
+
+    &:disabled {
+      color: #94d3a2;
+    }
+  }
+
+  &.btn-danger {
+    color: #cb2431;
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
+      color: #cb2431;
+    }
+
+    &:not(:disabled):active {
+      color: #be222e;
+    }
+
+    &:disabled {
+      color: #fafbfc;
+    }
+  }
+
+  &.btn-plain {
+    box-shadow: none;
+    background: none;
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
+      box-shadow: none;
+      background: none;
+    }
+
+    &:disabled {
+      color: #ccc;
+    }
+  }
+
+  &:disabled.loading {
+    color: transparent;
+    &::after {
+      display: inline-block;
+      content: '';
+      width: 16px;
+      height: 16px;
+      border: 2px solid #eee;
+      border-top-color: #666;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      position: absolute;
+      left: 50%;
+      margin-left: -8px;
+      top: 50%;
+      margin-top: -8px;
+    }
+  }
+}

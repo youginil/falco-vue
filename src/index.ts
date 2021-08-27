@@ -17,9 +17,10 @@ import BugSelect from './components/BugSelect.vue';
 import BugSkeleton from './components/BugSkeleton.vue';
 import BugTable from './components/BugTable.vue';
 import BugTableColumn from './components/BugTableColumn.vue';
+import BugTabPane from './components/BugTabPane.vue';
+import BugTabs from './components/BugTabs.vue';
 import BugTextarea from './components/BugTextarea.vue';
 import BugFormItem from './components/BugFormItem.vue';
-import BugTooltip from './components/BugTooltip.vue';
 
 import BugMessage from './global/message';
 import BugConfirm from './global/confirm';
@@ -43,9 +44,10 @@ const components = [
   BugSkeleton,
   BugTable,
   BugTableColumn,
+  BugTabPane,
+  BugTabs,
   BugTextarea,
   BugFormItem,
-  BugTooltip,
 ];
 
 export default {

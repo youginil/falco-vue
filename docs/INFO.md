@@ -204,21 +204,29 @@ type OrderBy = { prop: string; order: 'asc' | 'desc' | '' };
 |prop       |string         |N         |""        |Column property name                                      |
 |width      |string,number  |N         |          |Column width                                              |
 
+### BugTabs
+|Event        |Parameter    |Description                                             |
+|-------------|-------------|--------------------------------------------------------|
+|change       |Key's type   |Tab changed                                             |
+
+|Slot         |Description                                                     |
+|-------------|----------------------------------------------------------------|
+|default      |Tab panes                                                       |
+
+### BugTabPane
+|Prop       |Type           |Required  |Default   |Description                                               |
+|-----------|---------------|----------|----------|----------------------------------------------------------|
+|key        |string, number |Y         |          |Tab unique key.                                           |
+
+|Slot         |Description                                                     |
+|-------------|----------------------------------------------------------------|
+|default      |Tab title content                                               |
+
 ### BugTextarea
 |Prop         |Type      |Required  |Default   |Description                                               |
 |-------------|----------|----------|----------|----------------------------------------------------------|
 |disabled     |boolean   |N         |false     |Disabled status                                           |
 |placeholder  |string    |N         |""        |Placeholder                                               |
-
-### BugTooltip
-|Prop       |Type      |Required  |Default   |Description                                               |
-|-----------|----------|----------|---------------|-----------------------------------------------------|
-|position   |string    |N         |bottom-middle  |Same as BugPopover                                   |
-
-|Slot         |Description                                                     |
-|-------------|----------------------------------------------------------------|
-|default      |Tooltip position                                                |
-|tooltip      |Tooltip content                                                 |
 
 ### BugMessage
 ```

@@ -1,0 +1,9 @@
+.bug-dropdown-item {
+  line-height: 1.5;
+  padding: 4px 8px 4px 16px;
+  cursor: pointer;
+  &:hover {
+    background-color: #0366d6;
+    color: #fff;
+  }
+}

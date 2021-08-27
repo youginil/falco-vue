@@ -1,0 +1,20 @@
+.bug-tab-pane {
+  display: inline-block;
+  padding: 8px 10px;
+  cursor: default;
+  border-radius: 5px;
+  transition: all 0.3s linear;
+
+  &.block {
+    display: block;
+  }
+
+  &.selected {
+    background-color: #ddd;
+  }
+
+  &:not(.selected):hover {
+    background-color: #ddd;
+    cursor: pointer;
+  }
+}

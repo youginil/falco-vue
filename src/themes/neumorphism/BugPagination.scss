@@ -1,0 +1,77 @@
+.bug-pagination {
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 500;
+  .bug-pagination-total {
+    display: inline-block;
+    line-height: 20px;
+    padding: 5px 10px;
+  }
+  .bug-pagination-prev,
+  .bug-pagination-next,
+  .bug-pagination-page {
+    display: inline-block;
+    line-height: 20px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 6px;
+    transition: all 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    cursor: pointer;
+    background: #ebecf0;
+    box-shadow: 3px 3px 6px #c8c9cc, -3px -3px 6px #ffffff;
+  }
+  .bug-pagination-prev::before,
+  .bug-pagination-next::after {
+    display: inline-block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    margin: 2px 0;
+    background-color: currentColor;
+  }
+  .bug-pagination-prev::before {
+    clip-path: polygon(
+      9.8px 12.8px,
+      8.7px 12.8px,
+      4.5px 8.5px,
+      4.5px 7.5px,
+      8.7px 3.2px,
+      9.8px 4.3px,
+      6.1px 8px,
+      9.8px 11.7px,
+      9.8px 12.8px
+    );
+  }
+  .bug-pagination-next::after {
+    clip-path: polygon(
+      6.2px 3.2px,
+      7.3px 3.2px,
+      11.5px 7.5px,
+      11.5px 8.5px,
+      7.3px 12.8px,
+      6.2px 11.7px,
+      9.9px 8px,
+      6.2px 4.3px,
+      6.2px 3.2px
+    );
+  }
+  .bug-pagination-page {
+    &.current-page {
+      color: #1654f0;
+      box-shadow: inset 3px 3px 6px #c8c9cc, inset -3px -3px 6px #ffffff;
+    }
+  }
+  .bug-pagination-prev:hover,
+  .bug-pagination-next:hover,
+  .bug-pagination-page:not(.current-page):hover {
+    background: linear-gradient(145deg, #d4d4d8, #fbfdff);
+    box-shadow: 3px 3px 6px #c8c9cc, -3px -3px 6px #ffffff;
+  }
+  .bug-pagination-gap {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+    cursor: default;
+  }
+}

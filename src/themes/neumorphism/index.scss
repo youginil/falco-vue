@@ -1,0 +1,38 @@
+@use "sass:math";
+@import '../../styles/normalize.scss';
+@import '../../styles/shorthand.scss';
+
+html,
+body {
+  background-color: #ebecf0;
+  color: #6d7587;
+}
+button,
+input,
+textarea {
+  color: #6d7587;
+}
+
+@import 'BugBacktop.scss';
+@import 'BugButton.scss';
+@import 'BugCheckbox.scss';
+@import 'BugCheckboxGroup.scss';
+@import 'BugConfirm.scss';
+@import 'BugDate.scss';
+@import 'BugDropdown.scss';
+@import 'BugDropdownItem.scss';
+@import 'BugFormItem.scss';
+@import 'BugInput.scss';
+@import 'BugLoading.scss';
+@import 'BugMessage.scss';
+@import 'BugModal.scss';
+@import 'BugPagination.scss';
+@import 'BugPopover.scss';
+@import 'BugRadio.scss';
+@import 'BugRadioGroup.scss';
+@import 'BugSelect.scss';
+@import 'BugSkeleton.scss';
+@import 'BugTable.scss';
+@import 'BugTabPane.scss';
+@import 'BugTabs.scss';
+@import 'BugTextarea.scss';

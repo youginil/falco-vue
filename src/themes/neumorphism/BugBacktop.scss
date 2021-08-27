@@ -1,0 +1,37 @@
+.bug-backtop {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background-color: #ebecf0;
+  border-radius: 50%;
+  box-shadow: -10px -10px 20px 0 #fafbff, 10px 10px 20px 0 #a6abbd;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  align-items: center;
+  justify-content: center;
+  &::before {
+    content: '';
+    display: inline-block;
+    border-bottom: 8px solid #aaa;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+  }
+  &:hover {
+    box-shadow: inset 4px 4px 8px #c8c9cc, inset -4px -4px 8px #ffffff;
+  }
+}
+.bug-backtop-enter-from,
+.bug-backtop-leave-to {
+  opacity: 0;
+}
+.bug-backtop-enter-to,
+.bug-backtop-leave-from {
+  opacity: 1;
+}
+.bug-backtop-enter-active,
+.bug-backtop-leave-active {
+  transition: opacity 0.3s ease;
+}

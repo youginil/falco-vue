@@ -1,0 +1,60 @@
+.bug-radio {
+  $height: 32px;
+  $input-height: 20px;
+  display: inline-block;
+  position: relative;
+
+  input {
+    width: $input-height;
+    height: $input-height;
+    margin: math.div($height - $input-height, 2) 0;
+    opacity: 0;
+  }
+
+  .bug-radio-flag {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: $input-height;
+    height: $input-height;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #d4d4d8, #fbfdff);
+    box-shadow: 2px 2px 4px #c8c9cc, -2px -2px 4px #ffffff;
+    position: absolute;
+    left: 0;
+    top: math.div($height - $input-height, 2);
+    &::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background-color: #8a92a5;
+      border-radius: 50%;
+      transform: scale(0);
+      transition: transform 0.2s linear;
+    }
+  }
+
+  .bug-radio-label {
+    font-size: 14px;
+    line-height: $height;
+    padding-left: 5px;
+  }
+
+  input:checked + .bug-radio-flag {
+    &::after {
+      transform: scale(1);
+    }
+  }
+
+  input:disabled {
+    & + .bug-radio-flag {
+      &::after {
+        opacity: 0.4;
+      }
+
+      & + .bug-radio-label {
+        opacity: 0.4;
+      }
+    }
+  }
+}

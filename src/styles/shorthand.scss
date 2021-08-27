@@ -4,6 +4,18 @@
   display: block;
 }
 
+.pr {
+  position: relative;
+}
+
+.pa {
+  position: absolute;
+}
+
+.pf {
+  position: fixed;
+}
+
 .ib {
   display: inline-block;
 }
