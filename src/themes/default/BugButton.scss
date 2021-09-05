@@ -91,7 +91,7 @@
   }
 
   &.btn-plain {
-    border: transparent;
+    border-color: transparent;
     background-color: transparent;
     transition: color 0.3s ease;
     &:not(:disabled):hover {

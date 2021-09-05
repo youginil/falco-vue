@@ -49,7 +49,7 @@
               v-show="level === PanelLevel.Day"
               class="bug-date-title clickable"
               @click="onClickMonthTitle"
-              >{{ monthTitle }}</span
+              >-{{ monthTitle }}</span
             >
           </div>
           <div>
@@ -137,7 +137,7 @@
               </li>
             </ul>
           </div>
-          <div class="bug-date-today-btn" @click="onClickToday">今天</div>
+          <div class="bug-date-today-btn" @click="onClickToday">Today</div>
         </div>
       </div>
     </transition>
@@ -218,7 +218,7 @@ export default defineComponent({
           return `${start}-${start + 9}`;
         case PanelLevel.Month:
         case PanelLevel.Day:
-          return `${year.value}年`;
+          return `${year.value}`;
         default:
       }
       return '';
@@ -226,7 +226,7 @@ export default defineComponent({
 
     const monthTitle = computed((): string => {
       if (level.value === PanelLevel.Day) {
-        return `${month.value}月`;
+        return month.value > 9 ? `${month.value}` : `0${month.value}`;
       }
       return '';
     });
@@ -433,7 +433,7 @@ export default defineComponent({
       const y = today.getFullYear();
       const m = today.getMonth() + 1;
       const d = today.getDate();
-      emit('change', `${y}-${m > 9 ? m : '0' + m}-${d > 9 ? d : '0' + d}`);
+      emit('update:modelValue', `${y}-${m > 9 ? m : '0' + m}-${d > 9 ? d : '0' + d}`);
       open.value = false;
     };
 
