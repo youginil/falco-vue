@@ -1,5 +1,6 @@
 <template>
   <div class="tc">
+    <bug-backtop></bug-backtop>
     <h4 class="title">BugButton</h4>
     <div>
       <bug-button class="mr10">Default</bug-button>
