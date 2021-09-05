@@ -5,7 +5,7 @@
         :name="radioName"
         :label="option.label"
         :disabled="disabled"
-        :value="modelValue === option.value"
+        :modelValue="modelValue === option.value"
         @change="onRadioChange(option.value, $event)"
       />
     </li>

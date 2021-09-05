@@ -66,7 +66,7 @@ type CheckboxItem = {label: string; value: ValueType};
 ### BugFormItem
 |Prop       |Type           |Required  |Default   |Description                                               |
 |-----------|---------------|----------|----------|----------------------------------------------------------|
-|layout     |enum           |N         |h         |Layout. "h" - horizontal, "v" - vertical                  |
+|layout     |enum           |N         |v         |Layout. "h" - horizontal, "v" - vertical                  |
 |label      |string         |N         |          |Text label.                                               |
 |labelWidth |string,number  |N         |100       |Label width for horizontal layout                         |
 |block      |boolean        |N         |true      |Block style                                               |

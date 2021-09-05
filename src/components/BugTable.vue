@@ -55,7 +55,6 @@ export default defineComponent({
           const thOn: Record<string, () => void> = {};
           if (sortable) {
             thOn.onClick = () => {
-              console.log(1);
               for (let i = 0; i < this.sort.length; i++) {
                 const ob = this.sort[i];
                 if (ob.prop === propName) {
