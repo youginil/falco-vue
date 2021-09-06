@@ -3,6 +3,7 @@ const path = require('path');
 
 // https://vitejs.dev/config/
 export default ({ command, mode }) => {
+  console.log(command, mode);
   if (command === 'serve') {
     return {
       plugins: [vue()],
