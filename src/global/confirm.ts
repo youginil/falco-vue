@@ -19,7 +19,8 @@ if (document.body) {
 }
 
 function Confirm(title: string): Promise<void> {
-  const data = root._instance!.data;
+  // @ts-ignore
+  const data = window.__bugconfirm.data;
   data.show = true;
   data.title = title;
   return new Promise((resolve) => {

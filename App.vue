@@ -2,7 +2,7 @@
   <div class="tc">
     <bug-backtop></bug-backtop>
     <h4 class="title">BugButton</h4>
-    <div>
+    <div class="content">
       <bug-button class="mr10">Default</bug-button>
       <bug-button class="mr10" type="primary">Primary</bug-button>
       <bug-button class="mr10" type="danger">Danger</bug-button>
@@ -11,7 +11,7 @@
       <bug-button :loading="true">Loading</bug-button>
     </div>
     <h4 class="title">BugCheckbox</h4>
-    <div>
+    <div class="content">
       <bug-checkbox class="mr10" label="Agree or disagree"></bug-checkbox>
       <bug-checkbox
         class="mr10"
@@ -21,57 +21,31 @@
       <bug-checkbox label="Partial selection" :partial="true"></bug-checkbox>
     </div>
     <h4 class="title">BugCheckboxGroup</h4>
-    <div>
+    <div class="content">
       <bug-checkbox-group
         :options="checkboxGroupOptions"
         v-model="checkboxGroupValue"
       ></bug-checkbox-group>
     </div>
     <h4 class="title">BugDate</h4>
-    <div>
+    <div class="content">
       <bug-date v-model="dateValue"></bug-date>
     </div>
     <h4 class="title">BugDropdown</h4>
-    <div>
-      <bug-dropdown position="top-start">
+    <div class="content">
+      <bug-dropdown>
         <template #default>
-          <bug-button class="mr10">Top-Start</bug-button>
+          Fruits
         </template>
-        <template #dropdown>Content</template>
-      </bug-dropdown>
-      <bug-dropdown position="top-middle">
-        <template #default>
-          <bug-button class="mr10">Top-Middle</bug-button>
+        <template #dropdown>
+          <bug-dropdown-item>Apple</bug-dropdown-item>
+          <bug-dropdown-item>Banana</bug-dropdown-item>
+          <bug-dropdown-item>Orange</bug-dropdown-item>
         </template>
-        <template #dropdown>Content</template>
-      </bug-dropdown>
-      <bug-dropdown class="mr10" position="top-end">
-        <template #default>
-          <bug-button>Top-End</bug-button>
-        </template>
-        <template #dropdown>Content</template>
-      </bug-dropdown>
-      <bug-dropdown class="mr10" position="bottom-start">
-        <template #default>
-          <bug-button>Bottom-Start</bug-button>
-        </template>
-        <template #dropdown>Content</template>
-      </bug-dropdown>
-      <bug-dropdown class="mr10" position="bottom-middle">
-        <template #default>
-          <bug-button>Bottom-Middle</bug-button>
-        </template>
-        <template #dropdown>Content</template>
-      </bug-dropdown>
-      <bug-dropdown position="bottom-end">
-        <template #default>
-          <bug-button>Bottom-End</bug-button>
-        </template>
-        <template #dropdown>Content</template>
       </bug-dropdown>
     </div>
     <h4 class="title">BugFormItem</h4>
-    <div style="width: 300px; margin: 0 auto">
+    <div class="content">
       <bug-form-item label="Username">
         <bug-input width="100%"></bug-input>
       </bug-form-item>
@@ -80,16 +54,16 @@
       </bug-form-item>
     </div>
     <h4 class="title">BugInput</h4>
-    <div>
+    <div class="content">
       <bug-input class="mr10"></bug-input>
       <bug-input placeholder="number" type="number"></bug-input>
     </div>
     <h4 class="title">BugLoading</h4>
-    <div>
+    <div class="content">
       <bug-loading tip="Loading..."></bug-loading>
     </div>
     <h4 class="title">BugPopover</h4>
-    <div>
+    <div class="content">
       <bug-popover>
         <template #default>
           <bug-button class="mr10">Hover</bug-button>
@@ -104,28 +78,28 @@
       </bug-popover>
     </div>
     <h4 class="title">BugRadio</h4>
-    <div>
+    <div class="content">
       <bug-radio class="mr10" label="Hello radio"></bug-radio>
       <bug-radio label="Disabled" :disabled="true"></bug-radio>
     </div>
     <h4 class="title">BugRadioGroup</h4>
-    <div>
+    <div class="content">
       <bug-radio-group
         :options="radioGroupOptions"
         v-model="radioGroupValue"
       ></bug-radio-group>
     </div>
     <h4 class="title">BugSelect</h4>
-    <div>
+    <div class="content">
       <bug-select :options="selectOptions" v-model="selectValue"></bug-select>
     </div>
     <h4 class="title">BugSkeleton</h4>
-    <div style="width: 500px; margin: 0 auto">
+    <div class="content">
       <bug-skeleton></bug-skeleton>
       <bug-skeleton class="mt20" layout="table"></bug-skeleton>
     </div>
     <h4 class="title">BugTable</h4>
-    <div style="width: 800px; margin: 0 auto">
+    <div class="content">
       <bug-table :list="tableList" :sort="tableSort">
         <bug-table-column prop="id"></bug-table-column>
         <bug-table-column prop="name"></bug-table-column>
@@ -133,7 +107,7 @@
       </bug-table>
     </div>
     <h4 class="title">BugTabs</h4>
-    <div>
+    <div class="content">
       <bug-tabs v-model="tab">
         <bug-tab-pane key="1">Apple</bug-tab-pane>
         <bug-tab-pane key="2">Orange</bug-tab-pane>
@@ -141,18 +115,18 @@
       </bug-tabs>
     </div>
     <h4 class="title">BugTextarea</h4>
-    <div style="width: 600px; margin: 0 auto;">
+    <div class="content">
       <bug-textarea></bug-textarea>
     </div>
     <h4 class="title">BugMessage</h4>
-    <div>
+    <div class="content">
       <bug-button class="mr10" @click="info">Info</bug-button>
       <bug-button class="mr10" @click="warn">Warning</bug-button>
       <bug-button class="mr10" @click="error">Error</bug-button>
       <bug-button @click="success">Success</bug-button>
     </div>
     <h4 class="title">BugConfirm</h4>
-    <div>
+    <div class="content">
       <bug-button @click="confirm">Confirm</bug-button>
     </div>
   </div>
@@ -239,6 +213,21 @@ export default defineComponent({
 }
 
 h4.title {
-  margin: 20px 0;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #eee;
+  width: 800px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+div.content {
+  width: 800px;
+  margin: 0 auto 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 </style>

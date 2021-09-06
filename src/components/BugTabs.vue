@@ -14,8 +14,6 @@ export default defineComponent({
   },
   setup() {},
   render() {
-    //@ts-ignore
-    window.abc = this;
     // @ts-ignore
     const panes = this.$slots.default();
     const keys = panes.map((item) => item.props?.key);

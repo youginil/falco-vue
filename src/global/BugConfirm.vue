@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, getCurrentInstance } from 'vue';
 import BugModal from '../components/BugModal.vue';
 import BugButton from '../components/BugButton.vue';
 
@@ -31,5 +31,10 @@ export default defineComponent({
       this.onclick();
     },
   },
+  mounted() {
+    const instance = getCurrentInstance();
+    // @ts-ignore
+    window.__bugconfirm = instance;
+  }
 });
 </script>
