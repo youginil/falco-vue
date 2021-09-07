@@ -3,7 +3,9 @@
 A simple efficient web component library base on Vue 3.
 
 [Live Example](https://yinliguo.github.io/bugui)
-[API Document](https://github.com/yinliguo/bugui/blob/main/api.md)
+and
+[Example Source](https://github.com/yinliguo/bugui/blob/main/App.vue),
+[API Document](https://github.com/yinliguo/bugui/blob/main/api.md),
 
 ## Basic usage
 ```
