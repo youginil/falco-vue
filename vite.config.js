@@ -6,6 +6,9 @@ export default ({ command, mode }) => {
   console.log(command, mode);
   if (command === 'serve') {
     return {
+      optimizeDeps: {
+        entries: path.resolve(__dirname, 'index.html'),
+      },
       plugins: [vue()],
     };
   } else if (command === 'build') {

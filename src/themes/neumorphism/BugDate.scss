@@ -21,12 +21,12 @@ $header-height: 40px;
   input {
     background: transparent;
     outline: none;
-    border-radius: 6px;
+    border-radius: 20px;
     background: #ebecf0;
     box-shadow: 3px 3px 6px #c8c9cc, -3px -3px 6px #ffffff;
     font-size: 14px;
     line-height: 22px;
-    padding: 5px 12px;
+    padding: 5px 14px;
     width: 100%;
     cursor: default;
     &::placeholder {
