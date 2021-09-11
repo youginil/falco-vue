@@ -1,7 +1,7 @@
 .bug-table {
   overflow: auto;
   border-radius: 10px;
-  background: #ebecf0;
+  background: $main-color;
   box-shadow: 3px 3px 6px #c8c9cc, -3px -3px 6px #ffffff;
 
   > table {
@@ -10,8 +10,6 @@
   }
   .bug-table-th {
     text-align: left;
-    background-color: #fafafa;
-    border-bottom: 1px solid #f0f0f0;
     padding: 16px;
     font-weight: 500;
     vertical-align: middle;
@@ -55,7 +53,7 @@
   }
   .bug-table-row {
     transition: background-color 0.3s;
-    &:hover {
+    &:nth-child(odd) {
       background-color: #fafafa;
     }
   }

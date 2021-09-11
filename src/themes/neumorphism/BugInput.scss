@@ -6,15 +6,15 @@
     font-size: 14px;
     line-height: 22px;
     outline: none;
-    padding: 5px 14px;
+    padding: 5px 16px;
     width: 100%;
-    background: #ebecf0;
+    background: $main-color;
     box-shadow: inset 3px 3px 6px #c8c9cc, inset -3px -3px 6px #ffffff;
     &::placeholder {
       color: #a3aab1;
     }
     &:disabled {
-      color: #959da5;
+      opacity: 0.6;
     }
   }
 }

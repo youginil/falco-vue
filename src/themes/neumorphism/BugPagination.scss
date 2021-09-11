@@ -17,7 +17,7 @@
     border-radius: 6px;
     transition: all 0.2s cubic-bezier(0.3, 0, 0.5, 1);
     cursor: pointer;
-    background: #ebecf0;
+    background: $main-color;
     box-shadow: 3px 3px 6px #c8c9cc, -3px -3px 6px #ffffff;
   }
   .bug-pagination-prev::before,

@@ -22,7 +22,7 @@ $header-height: 40px;
     background: transparent;
     outline: none;
     border-radius: 20px;
-    background: #ebecf0;
+    background: $main-color;
     box-shadow: 3px 3px 6px #c8c9cc, -3px -3px 6px #ffffff;
     font-size: 14px;
     line-height: 22px;
@@ -101,7 +101,7 @@ $header-height: 40px;
   left: 0;
   width: $panel-width;
   z-index: 1;
-  background-color: #ebecf0;
+  background-color: $main-color;
   border-radius: 2px;
   box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
     0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);

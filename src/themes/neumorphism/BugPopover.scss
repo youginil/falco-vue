@@ -13,7 +13,7 @@ $small-triangle-offset: -$small-triangle-width;
   display: inline-block;
   padding: 10px;
   width: 200px;
-  background-color: #ebecf0;
+  background-color: $main-color;
   border: 1px solid $border-color;
   border-radius: 6px;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
@@ -42,7 +42,7 @@ $small-triangle-offset: -$small-triangle-width;
       bottom: $large-triangle-offset;
     }
     &::after {
-      border-top-color: #ebecf0;
+      border-top-color: $main-color;
       bottom: $small-triangle-offset;
     }
     &.black::before,
@@ -58,7 +58,7 @@ $small-triangle-offset: -$small-triangle-width;
       top: $large-triangle-offset;
     }
     &::after {
-      border-bottom-color: #ebecf0;
+      border-bottom-color: $main-color;
       top: $small-triangle-offset;
     }
     &.black::before,
@@ -74,7 +74,7 @@ $small-triangle-offset: -$small-triangle-width;
       right: $large-triangle-offset;
     }
     &::after {
-      border-left-color: #ebecf0;
+      border-left-color: $main-color;
       right: $small-triangle-offset;
     }
     &.black::before,
@@ -90,7 +90,7 @@ $small-triangle-offset: -$small-triangle-width;
       left: $large-triangle-offset;
     }
     &::after {
-      border-right-color: #ebecf0;
+      border-right-color: $main-color;
       left: $small-triangle-offset;
     }
     &.black::before,

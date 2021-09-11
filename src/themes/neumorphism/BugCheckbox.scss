@@ -22,7 +22,7 @@
     height: $input-height;
     width: $input-height;
     border-radius: 4px;
-    background: #ebecf0;
+    background: $main-color;
     box-shadow: inset 2px 2px 4px #c8c9cc, inset -2px -2px 4px #ffffff;
     position: absolute;
     left: 0;
@@ -50,9 +50,9 @@
   }
 
   input:checked + .bug-checkbox-flag {
-    border-color: #1654f0;
+    border-color: #8a92a5;
     &::after {
-      border-color: #1654f0;
+      border-color: #8a92a5;
     }
   }
 
@@ -73,7 +73,7 @@
     left: 6px;
     top: 9px;
     transform: rotate(0);
-    background-color: #1654f0;
+    background-color: #8a92a5;
   }
 
   &.disabled {

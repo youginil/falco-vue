@@ -1,16 +1,17 @@
 @use "sass:math";
+@import './var.scss';
 @import '../../styles/normalize.scss';
 @import '../../styles/shorthand.scss';
 
 html,
 body {
-  background-color: #ebecf0;
-  color: #6d7587;
+  background-color: $main-color;
+  color: $main-font-color;
 }
 button,
 input,
 textarea {
-  color: #6d7587;
+  color: $main-font-color;
 }
 
 @import 'BugBacktop.scss';
