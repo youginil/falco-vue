@@ -5,6 +5,10 @@
   transition: all 0.3s linear;
   border-radius: 20px;
 
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
   &.block {
     display: block;
   }

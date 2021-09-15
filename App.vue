@@ -127,7 +127,7 @@
     </div>
     <h4 class="title">BugConfirm</h4>
     <div class="content">
-      <bug-button @click="confirm" width="100%">Confirm</bug-button>
+      <bug-button @click="confirm">Confirm</bug-button>
     </div>
   </div>
 </template>

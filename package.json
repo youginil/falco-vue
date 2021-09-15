@@ -1,6 +1,6 @@
 {
   "name": "bugui",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "",
   "main": "./dist/bugui.umd.js",
   "module": "./dist/bugui.es.js",
@@ -21,14 +21,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yinliguo/bugui.git"
+    "url": "git+https://github.com/lgyin/bugui.git"
   },
   "author": "Liguo Yin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yinliguo/bugui/issues"
+    "url": "https://github.com/lgyin/bugui/issues"
   },
-  "homepage": "https://github.com/yinliguo/bugui#readme",
+  "homepage": "https://github.com/lgyin/bugui#readme",
   "dependencies": {
     "vue": "^3.2.11"
   },
