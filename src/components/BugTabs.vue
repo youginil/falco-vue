@@ -43,7 +43,6 @@ export default defineComponent({
           },
           onClick() {
             if (k !== that.$props.modelValue) {
-              console.log(k);
               that.$emit('update:modelValue', k);
               that.$emit('change', k);
             }
