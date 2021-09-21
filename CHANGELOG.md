@@ -1,7 +1,7 @@
 # Changelog
-## 1.1.8
-### Feature
+## v1.1.9
+#### Feature
 - Add `clearable` property to BugInput
 
-### Bugfix
+#### Bugfix
 - Fix BugInput does not update with modelValue
