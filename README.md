@@ -4,11 +4,8 @@ A simple efficient web UI library base on Vue 3.
 
 [Live Example](https://lgyin.github.io/bugui)
 and
-[Example Source](https://github.com/lgyin/bugui/blob/main/App.vue)
+[Example Source](https://github.com/lgyin/bugui/blob/main/App.vue), [API Document](https://github.com/lgyin/bugui/blob/main/api.md)
 
-[API Document](https://github.com/lgyin/bugui/blob/main/api.md),
-
-[Changelog](https://github.com/lgyin/bugui/blob/main/CHANGELOG.md)
 
 ## Basic usage
 ```
@@ -23,3 +20,6 @@ createApp(App).use(BugUI).mount('#app');
 ```
 import './node_modules/bugui/dist/themes/neumorphism.css';
 ```
+
+## Changelog
+[Changelog](https://github.com/lgyin/bugui/blob/main/CHANGELOG.md)
