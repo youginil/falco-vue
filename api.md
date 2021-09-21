@@ -84,6 +84,7 @@ type CheckboxItem = {label: string; value: ValueType};
 |disabled     |boolean        |N         |false     |Disabled status                                           |
 |width        |string,number  |N         |""        |Width                                                     |
 |trim         |boolean        |N         |false     |Trim or not                                               |
+|clearable    |boolean        |N         |false     |Enable clear button                                       |
 
 |Event        |Parameter    |Description                                             |
 |-------------|-------------|--------------------------------------------------------|

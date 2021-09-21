@@ -55,8 +55,8 @@
     </div>
     <h4 class="title">BugInput</h4>
     <div class="content">
-      <bug-input class="mr10"></bug-input>
-      <bug-input placeholder="number" type="number"></bug-input>
+      <bug-input class="mr10" :clearable="true" v-model="inputText"></bug-input>
+      <bug-input placeholder="number" type="number" v-model="inputNumber"></bug-input>
     </div>
     <h4 class="title">BugLoading</h4>
     <div class="content">
@@ -147,6 +147,8 @@ export default defineComponent({
     ]);
     const checkboxGroupValue = ref([0]);
     const dateValue = ref('2020-01-01');
+    const inputText = ref('');
+    const inputNumber = ref(0);
     const radioGroupOptions = ref([
       { label: 'Apple', value: 1 },
       { label: 'Orange', value: 2 },
@@ -186,6 +188,8 @@ export default defineComponent({
       checkboxGroupOptions,
       checkboxGroupValue,
       dateValue,
+      inputText,
+      inputNumber,
       radioGroupOptions,
       radioGroupValue,
       selectOptions,

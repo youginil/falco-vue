@@ -28,6 +28,7 @@ $header-height: 40px;
     width: 100%;
     border-radius: 6px;
     cursor: default;
+    transition: all .3s linear;
     &::placeholder {
       color: #a3aab1;
     }
@@ -293,15 +294,12 @@ $header-height: 40px;
     }
   }
 }
-.bug-date-panel-enter,
+.bug-date-panel-enter-from,
 .bug-date-panel-leave-to {
   opacity: 0;
-}
-.bug-date-panel-enter-to,
-.bug-date-panel-leave {
-  opacity: 1;
+  transform: translateY(20px);
 }
 .bug-date-panel-enter-active,
 .bug-date-panel-leave-active {
-  transition: opacity 0.3s ease;
+  transition: all 0.3s linear;
 }

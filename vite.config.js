@@ -14,20 +14,27 @@ export default ({ command, mode }) => {
   } else if (command === 'build') {
     return {
       build: {
-        lib: {
-          entry: path.resolve(__dirname, 'src/index.ts'),
-          name: 'bugui',
-        },
         rollupOptions: {
           external: ['vue'],
+          input: {
+            bugui: path.resolve(__dirname, 'src/index.ts'),
+            default: path.resolve(__dirname, 'src/themes/default/index.scss'),
+            neumorphism: path.resolve(
+              __dirname,
+              'src/themes/neumorphism/index.scss'
+            ),
+          },
           output: {
             globals: {
               vue: 'Vue',
             },
             exports: 'named',
+            entryFileNames: () => '[name].js',
+            assetFileNames: () => 'themes/[name].[ext]',
           },
         },
         sourcemap: true,
+        assetsInlineLimit: 1024 ** 3,
       },
       plugins: [vue()],
       rollupOptions: {},

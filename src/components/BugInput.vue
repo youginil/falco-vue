@@ -5,11 +5,13 @@
       :type="type"
       :placeholder="placeholder"
       :disabled="disabled"
+      :style="[clearable && !disabled ? 'padding-right: 32px' : '']"
       @input="oninput"
       @keydown="onKeydown"
       @focus="onFocus"
       @blur="onBlur"
     />
+    <span class="clear" v-if="clearable" @click="clear"></span>
   </div>
 </template>
 
@@ -43,6 +45,10 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+    clearable: {
+      type: Boolean,
+      default: false,
+    },
   },
   setup(props, { emit }) {
     const { modelValue } = toRefs(props);
@@ -50,7 +56,8 @@ export default defineComponent({
 
     watch(modelValue, (newValue, oldValue) => {
       if (newValue !== input.value.value) {
-        //
+        // @ts-ignore
+        input.value.value = newValue;
       }
     });
 
@@ -99,12 +106,19 @@ export default defineComponent({
       emit('blur', e);
     };
 
+    function clear() {
+      const v = props.type === 'number' ? 0 : '';
+      emit('update:modelValue', v);
+      emit('change', v);
+    }
+
     return {
       input,
       oninput,
       onKeydown,
       onFocus,
       onBlur,
+      clear,
     };
   },
 });

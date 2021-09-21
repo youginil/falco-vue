@@ -1,15 +1,15 @@
 {
   "name": "bugui",
-  "version": "1.1.7",
+  "version": "1.1.8",
+  "keywords": [
+    "web",
+    "ui",
+    "component",
+    "vue"
+  ],
   "description": "",
-  "main": "./dist/bugui.umd.js",
-  "module": "./dist/bugui.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/bugui.es.js",
-      "require": "./dist/bugui.umd.js"
-    }
-  },
+  "main": "./dist/bugui.js",
+  "module": "./dist/bugui.js",
   "files": [
     "dist",
     "index.d.ts",
@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node build.js && vite build -c vite.doc.config.js"
+    "build": "vite build && vite build -c vite.doc.config.js"
   },
   "repository": {
     "type": "git",
@@ -34,16 +34,16 @@
   },
   "types": "index.d.ts",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.31.1",
-    "@typescript-eslint/parser": "^4.31.1",
-    "@vitejs/plugin-vue": "^1.6.2",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
+    "@vitejs/plugin-vue": "^1.8.1",
     "@vue/compiler-sfc": "^3.2.12",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^7.18.0",
     "prettier": "^2.4.1",
-    "sass": "^1.41.1",
+    "sass": "^1.42.0",
     "typescript": "^4.4.3",
-    "vite": "^2.5.8",
+    "vite": "^2.5.10",
     "vue-tsc": "^0.3.0"
   }
 }

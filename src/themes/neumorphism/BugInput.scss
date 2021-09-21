@@ -1,6 +1,8 @@
 .bug-input {
   display: inline-block;
   width: 150px;
+  position: relative;
+
   input {
     border-radius: 20px;
     font-size: 14px;
@@ -16,5 +18,31 @@
     &:disabled {
       opacity: 0.6;
     }
+  }
+
+  $clear-size: 18px;
+  & > .clear {
+    display: inline-block;
+    width: $clear-size;
+    height: $clear-size;
+    background-image: url(../../images/x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: opacity .3s linear;
+    position: absolute;
+    top: 50%;
+    margin-top: math.div(-$clear-size, 2);
+    right: 10px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &:disabled > .clear {
+    display: none;
   }
 }
