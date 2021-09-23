@@ -57,7 +57,7 @@
   }
   .bug-pagination-page {
     &.current-page {
-      color: #1654f0;
+      color: #8a92a5;
       box-shadow: inset 3px 3px 6px #c8c9cc, inset -3px -3px 6px #ffffff;
     }
   }
@@ -73,5 +73,24 @@
     line-height: 32px;
     padding: 0 10px;
     cursor: default;
+  }
+
+  .bug-page-info {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+    display: none;
+  }
+
+  @media screen and (max-width: 500px) {
+    .bug-pagination-total,
+    .bug-pagination-page,
+    .bug-pagination-gap {
+      display: none;
+    }
+    .bug-page-info {
+      display: inline-block;
+    }
   }
 }

@@ -10,12 +10,18 @@
   z-index: 999;
 }
 .bug-modal-box {
-  width: 500px;
+  @media screen and (min-width: 600px) {
+    width: 500px;
+  }
+  @media screen and (max-width: 600px) {
+    width: 80%;
+  }
   margin: 100px auto 50px;
   border: 1px solid #ebeef5;
   border-radius: 6px;
   background-color: #fff;
   overflow: hidden;
+  text-align: left;
 }
 .bug-modal-header {
   display: flex;

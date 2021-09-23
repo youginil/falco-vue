@@ -74,4 +74,23 @@
     padding: 0 10px;
     cursor: default;
   }
+
+  .bug-page-info {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+    display: none;
+  }
+
+  @media screen and (max-width: 500px) {
+    .bug-pagination-total,
+    .bug-pagination-page,
+    .bug-pagination-gap {
+      display: none;
+    }
+    .bug-page-info {
+      display: inline-block;
+    }
+  }
 }

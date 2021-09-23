@@ -23,3 +23,9 @@ import './node_modules/bugui/dist/themes/neumorphism.css';
 
 ## Changelog
 [Changelog](https://github.com/lgyin/bugui/blob/main/CHANGELOG.md)
+
+## TODO
+- large list
+- menu
+- button size & circle shape
+- neumorphism generator

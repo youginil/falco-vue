@@ -7,7 +7,7 @@
       v-show="enablePrev"
       class="bug-pagination-prev"
       @click="onPageClick(page - 1)"
-      >Previous</span
+      >Prev</span
     >
     <span
       v-for="(p, i) in leftPages"
@@ -30,6 +30,8 @@
       @click="p !== null && p !== page && onPageClick(p)"
       >{{ p === null ? '...' : p }}</span
     >
+    <!-- for mobile -->
+    <span class="bug-page-info">{{ page + ' / ' + pages}}</span>
     <span
       v-show="enableNext"
       class="bug-pagination-next"

@@ -3,12 +3,12 @@
     <bug-backtop></bug-backtop>
     <h4 class="title">BugButton</h4>
     <div class="content">
-      <bug-button class="mr10">Default</bug-button>
-      <bug-button class="mr10" type="primary">Primary</bug-button>
-      <bug-button class="mr10" type="danger">Danger</bug-button>
-      <bug-button class="mr10" type="plain">Plain</bug-button>
-      <bug-button class="mr10" :disabled="true">Disabled</bug-button>
-      <bug-button :loading="true">Loading</bug-button>
+      <bug-button class="m10">Default</bug-button>
+      <bug-button class="m10" type="primary">Primary</bug-button>
+      <bug-button class="m10" type="danger">Danger</bug-button>
+      <bug-button class="m10" type="plain">Plain</bug-button>
+      <bug-button class="m10" :disabled="true">Disabled</bug-button>
+      <bug-button :loading="true" class="m10">Loading</bug-button>
     </div>
     <h4 class="title">BugCheckbox</h4>
     <div class="content">
@@ -61,6 +61,15 @@
     <h4 class="title">BugLoading</h4>
     <div class="content">
       <bug-loading tip="Loading..."></bug-loading>
+    </div>
+    <h4 class="title">BugModal</h4>
+    <div class="content">
+      <bug-button @click="modalIsShow = true">Show Modal</bug-button>
+      <bug-modal title="This is modal title" v-model:show="modalIsShow">This is modal content</bug-modal>
+    </div>
+    <h4 class="title">BugPagination</h4>
+    <div class="content">
+      <bug-pagination :page="2" :pages="10" :total="100"></bug-pagination>
     </div>
     <h4 class="title">BugPopover</h4>
     <div class="content">
@@ -120,10 +129,10 @@
     </div>
     <h4 class="title">BugMessage</h4>
     <div class="content">
-      <bug-button class="mr10" @click="info">Info</bug-button>
-      <bug-button class="mr10" @click="warn">Warning</bug-button>
-      <bug-button class="mr10" @click="error">Error</bug-button>
-      <bug-button @click="success">Success</bug-button>
+      <bug-button class="m10" @click="info">Info</bug-button>
+      <bug-button class="m10" @click="warn">Warning</bug-button>
+      <bug-button class="m10" @click="error">Error</bug-button>
+      <bug-button @click="success" class="m10">Success</bug-button>
     </div>
     <h4 class="title">BugConfirm</h4>
     <div class="content">
@@ -184,6 +193,7 @@ export default defineComponent({
         //
       });
     }
+    const modalIsShow = ref(false);
     return {
       checkboxGroupOptions,
       checkboxGroupValue,
@@ -201,7 +211,8 @@ export default defineComponent({
       warn,
       error,
       success,
-      confirm
+      confirm,
+      modalIsShow,
     };
   },
 });
@@ -209,11 +220,13 @@ export default defineComponent({
 
 <style lang="scss">
 #app {
+  width: 100%;
+  max-width: 800px;
+  padding: 50px 20px;
+  margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-top: 60px;
   text-align: center;
-  margin: 50px 0;
 }
 
 h4.title {
@@ -221,12 +234,10 @@ h4.title {
   padding: 10px;
   border: 1px solid #ddd;
   background: #eee;
-  width: 800px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 div.content {
-  width: 800px;
   margin: 0 auto 30px;
   padding: 20px;
   border: 1px solid #ddd;

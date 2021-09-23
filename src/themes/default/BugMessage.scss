@@ -1,6 +1,11 @@
 .bug-message {
   display: inline-flex;
-  width: 300px;
+  @media screen and (min-width: 600px) {
+    width: 300px;
+  }
+  @media screen and (max-width: 600px) {
+    width: 80%;
+  }
   align-items: center;
   padding: 15px;
   border: 1px solid transparent;
@@ -10,7 +15,7 @@
   position: fixed;
   top: 0;
   left: 50%;
-  margin-left: -150px;
+  transform: translateX(-50%);
   z-index: 1000;
 
   > .bug-message-flag {
@@ -62,7 +67,7 @@
   &.bug-message-enter-from,
   &.bug-message-leave-to {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translate(-50%, -50px);
   }
 
   &.bug-message-enter-active,
@@ -73,7 +78,7 @@
   &.bug-message-enter-to,
   &.bug-message-leave-from {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(-50%, 0);
   }
 
   > .bug-message-content {
