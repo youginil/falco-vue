@@ -1,5 +1,6 @@
 # Changelog
-## v1.1.10
+## v1.1.11
+### Feature
 - Adapt to mobile
 
 ## v1.1.9
