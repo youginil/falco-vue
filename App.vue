@@ -24,14 +24,6 @@
           </div>
           <h3 class="mt20">Bug UI</h3>
           <p class="mt20">A simple efficient web UI library base on Vue3</p>
-          <!-- <div class="mt20">
-            <h5>Themes</h5>
-            <bug-radio-group
-              :options="themes"
-              v-model="theme"
-              @change="onThemeChange"
-            ></bug-radio-group>
-          </div> -->
         </div>
         <comp-def
           title="BugBacktop"
@@ -366,23 +358,6 @@ export default defineComponent({
         }
       });
     });
-
-    const themes = ref([
-      {
-        label: 'Default',
-        value: 'default',
-      },
-      {
-        label: 'Neumorphism',
-        value: 'neumorphism',
-      },
-    ]);
-    const theme = ref('default');
-
-    function onThemeChange() {
-      // @ts-ignore
-      window.setTheme && window.setTheme(theme.value);
-    }
 
     const backtopApi = ref<CompAPI>({
       props: [
@@ -1080,9 +1055,6 @@ export default defineComponent({
       comp,
       navExpand,
       onClickMenu,
-      themes,
-      theme,
-      onThemeChange,
       backtopApi,
       buttonApi,
       checkboxApi,
