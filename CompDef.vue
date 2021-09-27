@@ -85,6 +85,7 @@ export default defineComponent({
 .comp-title {
   font-weight: 400;
   text-align: center;
+  margin-top: 30px;
 }
 
 .subtitle {

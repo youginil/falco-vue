@@ -1163,7 +1163,7 @@ export default defineComponent({
       flex-shrink: 0;
       height: 100%;
       .menu {
-        display: none;
+        display: none !important;
       }
     }
 
@@ -1225,7 +1225,7 @@ export default defineComponent({
   }
 
   & > .app-content {
-    padding: 50px 0;
+    height: 100%;
     overflow-y: auto;
 
     @include pc {
@@ -1235,6 +1235,7 @@ export default defineComponent({
     .app-content-inner {
       width: 80%;
       max-width: 800px;
+      padding: 40px 0;
       margin: 0 auto;
 
       .home {
