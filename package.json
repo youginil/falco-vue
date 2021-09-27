@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build && vite build -c vite.style.config.js && vite build -c vite.doc.config.js && node build.js"
+    "build": "vite build && vite build -c vite.style.config.js && vite build -c vite.doc.config.js"
   },
   "repository": {
     "type": "git",
