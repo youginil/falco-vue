@@ -8,12 +8,6 @@ export default ({ command, mode }) => {
     build: {
       outDir: path.resolve(__dirname, 'docs'),
       sourcemap: true,
-      rollupOptions: {
-        external: [
-          './src/themes/default/index.scss',
-          './src/themes/neumorphism/index.scss',
-        ],
-      },
     },
     plugins: [vue()],
     rollupOptions: {},

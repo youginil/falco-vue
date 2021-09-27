@@ -1,7 +1,13 @@
 <template>
   <div class="app">
-    <ul class="app-nav">
+    <ul class="app-nav" :class="{ expand: navExpand }">
       <li
+        class="menu"
+        :class="{ expand: navExpand }"
+        @click="onClickMenu"
+      ></li>
+      <li
+        class="nav-item"
         v-for="item in navs"
         :key="item"
         :class="{ selected: comp === item }"
@@ -13,16 +19,19 @@
     <div class="app-content">
       <div class="app-content-inner">
         <div class="home" v-if="comp === 'Home'">
-          <h3>Bug UI</h3>
+          <div class="tc">
+            <img src="./images/logo.png" alt="" style="width: 100px">
+          </div>
+          <h3 class="mt20">Bug UI</h3>
           <p class="mt20">A simple efficient web UI library base on Vue3</p>
-          <div class="mt20">
+          <!-- <div class="mt20">
             <h5>Themes</h5>
             <bug-radio-group
               :options="themes"
               v-model="theme"
               @change="onThemeChange"
             ></bug-radio-group>
-          </div>
+          </div> -->
         </div>
         <comp-def
           title="BugBacktop"
@@ -304,7 +313,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, onMounted, ref } from 'vue';
 import { BugConfirm, BugMessage } from './src';
 import CompDef, { EventList, PropList, SlotList } from './CompDef.vue';
 
@@ -342,6 +351,21 @@ export default defineComponent({
     ]);
 
     const comp = ref('Home');
+
+    const navExpand = ref(false);
+
+    function onClickMenu(e: Event) {
+      e.stopPropagation();
+      navExpand.value = !navExpand.value;
+    }
+
+    onMounted(() => {
+      document.addEventListener('click', () => {
+        if (navExpand.value) {
+          navExpand.value = false;
+        }
+      });
+    });
 
     const themes = ref([
       {
@@ -1054,6 +1078,8 @@ export default defineComponent({
     return {
       navs,
       comp,
+      navExpand,
+      onClickMenu,
       themes,
       theme,
       onThemeChange,
@@ -1128,19 +1154,59 @@ export default defineComponent({
   }
 
   & > .app-nav {
+    background-color: #ffffff;
     border-right: 1px solid #eeeeee;
+    width: 300px;
+    overflow-y: auto;
 
     @include pc {
       flex-shrink: 0;
-      width: 300px;
       height: 100%;
-      overflow-y: auto;
+      .menu {
+        display: none;
+      }
     }
 
-    & > li {
+    @include phone {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      bottom: 0;
+      z-index: 1;
+      transition: all 0.3s linear;
+
+      &.expand {
+        left: 0;
+        box-shadow: 0 2px 10px 4px #eeeeee;
+      }
+      .menu {
+        display: block;
+      }
+    }
+
+    .menu {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-image: url(./images/list.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+
+      &.expand {
+        left: 320px;
+      }
+    }
+
+    & > .nav-item {
       display: block;
-      font-size: 18px;
-      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 300;
+      padding: 16px 20px;
       cursor: pointer;
       transition: all 0.3s linear;
 
@@ -1153,7 +1219,7 @@ export default defineComponent({
       }
 
       &.selected {
-        background: #dddddd;
+        background: #eeeeee;
       }
     }
   }
@@ -1167,11 +1233,9 @@ export default defineComponent({
     }
 
     .app-content-inner {
-      @include pc {
-        width: 80%;
-        max-width: 800px;
-        margin: 0 auto;
-      }
+      width: 80%;
+      max-width: 800px;
+      margin: 0 auto;
 
       .home {
         text-align: center;
