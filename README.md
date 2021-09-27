@@ -29,3 +29,6 @@ import './node_modules/bugui/dist/themes/neumorphism.css';
 - menu
 - button size & circle shape
 - neumorphism generator
+- loading size
+- radio, checkbox change event
+- style var

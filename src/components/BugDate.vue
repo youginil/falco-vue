@@ -1,7 +1,13 @@
 <template>
   <div class="bug-date" :class="{ open: open }" @click="toggleOpen">
     <div class="bug-date-result">
-      <input type="text" placeholder="Date" :value="modelValue" readonly />
+      <input
+        type="text"
+        placeholder="Date"
+        :value="modelValue"
+        readonly
+        :disabled="disabled"
+      />
       <span class="date-icon">
         <svg
           t="1592813672025"
@@ -193,6 +199,10 @@ export default defineComponent({
       type: Boolean,
       default: true,
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   setup(props, { emit }) {
     const { modelValue } = toRefs(props);
@@ -240,6 +250,9 @@ export default defineComponent({
     });
 
     const toggleOpen = () => {
+      if (props.disabled) {
+        return;
+      }
       open.value = !open.value;
       if (!open.value) {
         return;
@@ -433,7 +446,10 @@ export default defineComponent({
       const y = today.getFullYear();
       const m = today.getMonth() + 1;
       const d = today.getDate();
-      emit('update:modelValue', `${y}-${m > 9 ? m : '0' + m}-${d > 9 ? d : '0' + d}`);
+      emit(
+        'update:modelValue',
+        `${y}-${m > 9 ? m : '0' + m}-${d > 9 ? d : '0' + d}`
+      );
       open.value = false;
     };
 

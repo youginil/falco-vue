@@ -27,10 +27,6 @@ export default defineComponent({
       type: [String, Number, Boolean],
       default: null,
     },
-    name: {
-      type: String,
-      default: '',
-    },
     options: {
       type: Array as PropType<RadioItem[]>,
       default: [],
@@ -45,12 +41,7 @@ export default defineComponent({
     },
   },
   setup(props, { emit }) {
-    const radioName = ref(props.name);
-    onMounted(() => {
-      if (radioName.value === '') {
-        radioName.value = `radio-${Math.random()}`;
-      }
-    });
+    const radioName = ref(`bug-radio-${Math.random()}`);
 
     const onRadioChange = (v: RadioValueType, e: Event) => {
       if ((e.target as HTMLInputElement).checked) {
