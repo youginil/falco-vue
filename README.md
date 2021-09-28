@@ -24,5 +24,3 @@ import './node_modules/bugui/dist/themes/neumorphism.css';
 ## TODO
 - large list
 - menu
-- button size & circle shape
-- neumorphism generator

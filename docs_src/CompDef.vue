@@ -11,7 +11,7 @@
         <bug-table-column prop="type"></bug-table-column>
         <bug-table-column label="Required">
           <template #default="item">
-            {{ item.required ? 'Y' : 'N'}}
+            {{ item.required ? 'Y' : 'N' }}
           </template>
         </bug-table-column>
         <bug-table-column prop="default"></bug-table-column>
@@ -42,8 +42,8 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
-import BugTable from './src/components/BugTable.vue';
-import BugTableColumn from './src/components/BugTableColumn.vue';
+import BugTable from '../src/components/BugTable.vue';
+import BugTableColumn from '../src/components/BugTableColumn.vue';
 
 export type PropList = {
   name: string;
@@ -52,12 +52,20 @@ export type PropList = {
   default: string;
   desc: string;
 }[];
+
 export type SlotList = { name: string; desc: string }[];
+
 export type EventList = {
   name: string;
   params: string[] | string;
   desc: string;
 }[];
+
+export type CompAPI = {
+  props: PropList;
+  slots: SlotList;
+  events: EventList;
+};
 
 export default defineComponent({
   name: 'CompDef',
