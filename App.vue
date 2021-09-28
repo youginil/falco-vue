@@ -1,11 +1,7 @@
 <template>
   <div class="app">
     <ul class="app-nav" :class="{ expand: navExpand }">
-      <li
-        class="menu"
-        :class="{ expand: navExpand }"
-        @click="onClickMenu"
-      ></li>
+      <li class="menu" :class="{ expand: navExpand }" @click="onClickMenu"></li>
       <li
         class="nav-item"
         v-for="item in navs"
@@ -20,7 +16,7 @@
       <div class="app-content-inner">
         <div class="home" v-if="comp === 'Home'">
           <div class="tc">
-            <img src="./images/logo.png" alt="" style="width: 100px">
+            <img src="./images/logo.png" alt="" style="width: 150px" />
           </div>
           <h3 class="mt20">Bug UI</h3>
           <p class="mt20">A simple efficient web UI library base on Vue3</p>
@@ -489,7 +485,13 @@ export default defineComponent({
         },
       ],
       slots: [],
-      events: [],
+      events: [
+        {
+          name: 'change',
+          params: '',
+          desc: 'On change',
+        },
+      ],
     });
 
     const dateApi = ref<CompAPI>({
@@ -648,6 +650,13 @@ export default defineComponent({
           default: '""',
           desc: 'Loading tip',
         },
+        {
+          name: 'size',
+          type: ['string', 'number'],
+          required: false,
+          default: '""',
+          desc: 'Loading size',
+        },
       ],
       slots: [],
       events: [],
@@ -792,7 +801,13 @@ export default defineComponent({
         },
       ],
       slots: [],
-      events: [],
+      events: [
+        {
+          name: 'change',
+          params: '',
+          desc: 'On change',
+        },
+      ],
     });
 
     const radioGroupApi = ref<CompAPI>({
@@ -824,7 +839,13 @@ export default defineComponent({
         },
       ],
       slots: [],
-      events: [],
+      events: [
+        {
+          name: 'change',
+          params: '',
+          desc: 'On change',
+        },
+      ],
     });
 
     const selectApi = ref<CompAPI>({
@@ -1050,7 +1071,13 @@ export default defineComponent({
       });
     }
     const modalIsShow = ref(false);
+
+    function onChange(a: any, b: any) {
+      console.log(a, b);
+    }
+
     return {
+      onChange,
       navs,
       comp,
       navExpand,

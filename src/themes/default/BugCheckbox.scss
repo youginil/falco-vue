@@ -26,6 +26,7 @@
     position: absolute;
     left: 0;
     top: math.div($height - $input-height, 2);
+    transition: all .3s linear;
     &::after {
       display: inline-block;
       border: 2px solid transparent;

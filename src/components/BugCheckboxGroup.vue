@@ -9,7 +9,7 @@
         :modelValue="isChecked(option.value)"
         :label="option.label"
         :disabled="disabled"
-        @change="onChange(option.label)"
+        @change="onChange(option.label, $event)"
       />
     </li>
   </ul>
@@ -47,7 +47,7 @@ export default defineComponent({
       type: [String, Number],
     },
   },
-  setup(props) {
+  setup(props, { emit }) {
     const { modelValue, options } = toRefs(props);
 
     const style = computed(() => {
@@ -62,7 +62,8 @@ export default defineComponent({
       return modelValue.value.includes(v);
     };
 
-    const onChange = (label: string) => {
+    function onChange(label: string, e: Event) {
+      e.stopPropagation();
       const v = options.value.filter((item) => item.label === label)[0].value;
       const i = modelValue.value.indexOf(v);
       if (i >= 0) {
@@ -70,6 +71,7 @@ export default defineComponent({
       } else {
         modelValue.value.push(v);
       }
+      emit('change');
     };
 
     return {

@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, PropType, ref } from 'vue';
+import { defineComponent, PropType, ref } from 'vue';
 import BugRadio from './BugRadio.vue';
 
 type RadioValueType = string | number | boolean;
@@ -44,9 +44,11 @@ export default defineComponent({
     const radioName = ref(`bug-radio-${Math.random()}`);
 
     const onRadioChange = (v: RadioValueType, e: Event) => {
+      e.stopPropagation();
       if ((e.target as HTMLInputElement).checked) {
         emit('update:modelValue', v);
       }
+      emit('change');
     };
 
     return {
