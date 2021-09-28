@@ -139,16 +139,16 @@
       <div class="average">
         <bug-form-item
           layout="h"
-          :label="'Offset = ' + offset"
+          :label="'Radius = ' + radius"
           :block="true"
           class="pr20"
         >
           <input
             type="range"
             min="1"
-            :max="maxOffset"
+            :max="maxRadius"
             style="width: 100%"
-            v-model="offset"
+            v-model="radius"
           />
         </bug-form-item>
         <bug-form-item
@@ -169,16 +169,16 @@
       <div class="average">
         <bug-form-item
           layout="h"
-          :label="'Radius = ' + radius"
+          :label="'Offset = ' + offset"
           :block="true"
           class="pr20"
         >
           <input
             type="range"
             min="1"
-            :max="maxRadius"
+            :max="maxOffset"
             style="width: 100%"
-            v-model="radius"
+            v-model="offset"
           />
         </bug-form-item>
         <bug-form-item
@@ -255,15 +255,12 @@ export default defineComponent({
     const copied = ref(false);
 
     const maxSize = ref(400);
-    const maxOffset = computed(() => {
-      return Math.ceil(maxSize.value / 10);
-    });
+    const maxOffset = ref(50);
     const maxRadius = computed(() => {
-      return Math.ceil(maxSize.value / 10);
+      const min = Math.min(width.value, height.value);
+      return Math.ceil(min / 2);
     });
-    const maxBlur = computed(() => {
-      return Math.ceil(maxSize.value / 5);
-    });
+    const maxBlur = ref(100);
 
     watch(width, (v) => {
       height.value = v;
@@ -274,6 +271,10 @@ export default defineComponent({
       radius.value = Math.ceil(min / 10);
       blur.value = Math.ceil(min / 5);
       offset.value = Math.ceil(min / 10);
+    });
+
+    watch(offset, (o) => {
+      blur.value = o * 2;
     });
 
     const backgroundColor = computed(() => {
@@ -479,6 +480,7 @@ export default defineComponent({
 
     & > svg {
       width: 45px;
+      stroke-width: 6px;
     }
   }
 }
