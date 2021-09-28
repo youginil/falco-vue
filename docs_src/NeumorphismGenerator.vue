@@ -33,7 +33,7 @@
         ></span>
       </div>
     </div>
-    <div class="flex-hc flex-vc mt30">
+    <div class="flex-hc flex-vc mt20">
       <input type="color" v-model="color" class="mr30" />
       <div class="shapes">
         <div :class="{ selected: shape === 0 }" @click="shape = 0">
@@ -197,6 +197,9 @@
         </bug-form-item>
       </div>
     </div>
+    <div class="tr mt20">
+      Inspired by <a href="https://neumorphism.io/" target="blank">https://neumorphism.io/</a>
+    </div>
   </div>
 </template>
 
@@ -246,7 +249,7 @@ export default defineComponent({
     const radius = ref(20);
     const offset = ref(20);
     const blur = ref(40);
-    const color = ref('#E0E0E0');
+    const color = ref('#EBECF0');
     const intensity = ref(
       Math.ceil(((0.15 - MinIntensity) / (MaxIntensity - MinIntensity)) * 100)
     );
