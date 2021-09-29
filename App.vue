@@ -23,7 +23,7 @@
         </div>
         <neumorphism-generator v-if="comp === 'Neumorphism'" />
         <bug-backtop-def v-if="comp === 'BugBacktop'" />
-        <bug-button-def v-if="comp === 'BugButton'"/>
+        <bug-button-def v-if="comp === 'BugButton'" />
         <bug-checkbox-def v-if="comp === 'BugCheckbox'" />
         <bug-confirm-def v-if="comp === 'BugConfirm'" />
         <bug-date-def v-if="comp === 'BugDate'" />
@@ -47,7 +47,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue';
+import { defineComponent, onBeforeMount, onMounted, ref } from 'vue';
 import BugBacktopDef from './docs_src/BugBacktopDef.vue';
 import BugButtonDef from './docs_src/BugButtonDef.vue';
 import BugCheckboxDef from './docs_src/BugCheckboxDef.vue';
@@ -133,6 +133,13 @@ export default defineComponent({
           navExpand.value = false;
         }
       });
+    });
+
+    onBeforeMount(() => {
+      const hash = location.hash ? location.hash.substring(1) : '';
+      if (navs.value.includes(hash)) {
+        comp.value = hash;
+      }
     });
 
     return {

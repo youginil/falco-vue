@@ -17,6 +17,7 @@ createApp(App).use(BugUI).mount('#app');
 ```
 import './node_modules/bugui/dist/themes/neumorphism.css';
 ```
+[Neumorphism Generator](http://localhost:3000/#Neumorphism)
 
 ## Changelog
 [Changelog](https://github.com/lgyin/bugui/blob/main/CHANGELOG.md)
