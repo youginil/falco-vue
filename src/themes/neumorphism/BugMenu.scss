@@ -1,0 +1,64 @@
+.bug-menu {
+  .bug-menu-group {
+    &.expand {
+      & > .bug-menu-group-title::after {
+        transform: rotate(-180deg);
+      }
+    }
+
+    .bug-menu-group-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      font-weight: bold;
+      transition: all 0.3s linear;
+      cursor: pointer;
+
+      &:hover {
+        border-radius: 10px;
+        background: #ebecf0;
+        box-shadow: inset 5px 5px 10px #e3e4e8, inset -5px -5px 10px #f3f4f8;
+      }
+
+      &::after {
+        display: inline-block;
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-image: url(../../images/arrow-down.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transition: all 0.3s linear;
+      }
+    }
+
+    .bug-menu-group-content {
+      padding-left: 15px;
+      overflow: hidden;
+      display: none;
+    }
+
+    .bug-menu-item {
+      display: block;
+      padding: 10px 20px;
+      margin: 5px 0;
+      transition: color 0.3s linear;
+      cursor: pointer;
+
+      &:hover {
+        border-radius: 10px;
+        background: #ebecf0;
+        box-shadow: inset 5px 5px 10px #e3e4e8, inset -5px -5px 10px #f3f4f8;
+      }
+
+      &.selected {
+        cursor: default;
+        background: #ebecf0;
+        border-radius: 10px;
+        box-shadow: inset 4px 4px 8px #cacbce, inset -4px -4px 8px #ffffff;
+      }
+    }
+  }
+}

@@ -1,13 +1,13 @@
 <template>
   <div class="app">
     <ul class="app-nav" :class="{ expand: navExpand }">
-      <li class="menu" :class="{ expand: navExpand }" @click="onClickMenu"></li>
+      <li class="menu" :class="{ expand: navExpand }" @click="onClickExpand"></li>
       <li
         class="nav-item"
         v-for="item in navs"
         :key="item"
         :class="{ selected: comp === item }"
-        @click="comp = item"
+        @click="onClickMenu(item)"
       >
         {{ item }}
       </li>
@@ -31,6 +31,7 @@
         <bug-form-item-def v-if="comp === 'BugFormItem'" />
         <bug-input-def v-if="comp === 'BugInput'" />
         <bug-loading-def v-if="comp === 'BugLoading'" />
+        <bug-menu-def v-if="comp === 'BugMenu'" />
         <bug-message-def v-if="comp === 'BugMessage'" />
         <bug-modal-def v-if="comp === 'BugModal'" />
         <bug-pagination-def v-if="comp === 'BugPagination'" />
@@ -57,6 +58,7 @@ import BugDropdownDef from './docs_src/BugDropdownDef.vue';
 import BugFormItemDef from './docs_src/BugFormItemDef.vue';
 import BugInputDef from './docs_src/BugInputDef.vue';
 import BugLoadingDef from './docs_src/BugLoadingDef.vue';
+import BugMenuDef from './docs_src/BugMenuDef.vue';
 import BugMessageDef from './docs_src/BugMessageDef.vue';
 import BugModalDef from './docs_src/BugModalDef.vue';
 import BugPaginationDef from './docs_src/BugPaginationDef.vue';
@@ -81,6 +83,7 @@ export default defineComponent({
     BugFormItemDef,
     BugInputDef,
     BugLoadingDef,
+    BugMenuDef,
     BugMessageDef,
     BugModalDef,
     BugPaginationDef,
@@ -106,6 +109,7 @@ export default defineComponent({
       'BugFormItem',
       'BugInput',
       'BugLoading',
+      'BugMenu',
       'BugMessage',
       'BugModal',
       'BugPagination',
@@ -122,9 +126,14 @@ export default defineComponent({
 
     const navExpand = ref(false);
 
-    function onClickMenu(e: Event) {
+    function onClickExpand(e: Event) {
       e.stopPropagation();
       navExpand.value = !navExpand.value;
+    }
+
+    function onClickMenu(menu: string) {
+      comp.value = menu;
+      location.hash = menu;
     }
 
     onMounted(() => {
@@ -147,6 +156,7 @@ export default defineComponent({
       comp,
       navExpand,
       onClickMenu,
+      onClickExpand,
     };
   },
 });

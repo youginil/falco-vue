@@ -8,6 +8,7 @@ import BugDropdown from './components/BugDropdown.vue';
 import BugDropdownItem from './components/BugDropdownItem.vue';
 import BugInput from './components/BugInput.vue';
 import BugLoading from './components/BugLoading.vue';
+import BugMenu from './components/BugMenu.vue';
 import BugModal from './components/BugModal.vue';
 import BugPagination from './components/BugPagination.vue';
 import BugPopover from './components/BugPopover.vue';
@@ -35,6 +36,7 @@ const components = [
   BugDropdownItem,
   BugInput,
   BugLoading,
+  BugMenu,
   BugModal,
   BugPagination,
   BugPopover,

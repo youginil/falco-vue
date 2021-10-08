@@ -1,4 +1,8 @@
 # Changelog
+## v1.3.0
+### Feature
+- Add BugMenu component
+
 ## v1.2.0
 ### Feature
 - Add prop `disabled` to BugDate
