@@ -7,6 +7,7 @@
     border: 1px solid #e1e4e8;
     border-radius: 6px;
     color: #24292e;
+    background-color: #fafbfc;
     font-size: 14px;
     line-height: 20px;
     outline: none;
@@ -17,9 +18,10 @@
     &::placeholder {
       color: #a3aab1;
     }
-    &:focus {
+    &:not(:disabled):focus {
       border-color: #0366d6;
       box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
+      background-color: #ffffff;
     }
     &:disabled {
       background-color: #f3f4f6;

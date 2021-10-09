@@ -1,4 +1,8 @@
 # Changelog
+## v1.3.1
+### Bugfix
+- update with menu prop `index`
+
 ## v1.3.0
 ### Feature
 - Add BugMenu component

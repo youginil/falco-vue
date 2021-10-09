@@ -23,6 +23,16 @@ export default defineComponent({
     watch(current, (v) => {
       emit('change', v.value);
     });
+
+    watch(
+      () => props.index,
+      (v) => {
+        console.log(v);
+        if (v !== current.value) {
+          current.value = v;
+        }
+      }
+    );
   },
   render() {
     const slot = this.$slots.default;

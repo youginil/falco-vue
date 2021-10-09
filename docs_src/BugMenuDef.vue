@@ -5,7 +5,7 @@
     :slots="api.slots"
     :events="api.events"
   >
-    <bug-menu @change="onChange">
+    <bug-menu @change="onChange" :index="index">
       <bug-menu-group title="Dashboard">
         <bug-menu-item index="1-1">Home</bug-menu-item>
         <bug-menu-item index="1-2">User</bug-menu-item>
@@ -46,6 +46,8 @@ export default defineComponent({
   name: 'BugMenuDef',
   components: { CompDef, BugMenu, BugMenuGroup, BugMenuItem },
   setup() {
+    const index = ref('');
+
     function onChange(v: string) {
       console.log(v);
     }
@@ -114,6 +116,7 @@ export default defineComponent({
     });
 
     return {
+      index,
       onChange,
       api,
       groupApi,

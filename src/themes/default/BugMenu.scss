@@ -41,11 +41,11 @@
     .bug-menu-item {
       display: block;
       padding: 10px 20px;
-      transition: color 0.3s linear;
+      transition: all 0.3s linear;
       cursor: pointer;
 
       &:hover {
-        color: #0366d6;
+        background-color: #eeeeee;
       }
 
       &.selected {
