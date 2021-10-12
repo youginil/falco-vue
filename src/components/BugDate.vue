@@ -318,8 +318,10 @@ export default defineComponent({
       month.value += monthOffset;
       if (month.value > 12) {
         month.value = month.value % 12;
+        year.value += 1;
       } else if (month.value < 1) {
         month.value = (month.value % 12) + 12;
+        year.value -= 1;
       }
       const firstDay = new Date(year.value, month.value - 1, 1);
       const firstDayWeek = firstDay.getDay();
