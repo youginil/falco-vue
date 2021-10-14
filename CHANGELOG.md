@@ -1,4 +1,8 @@
 # Changelog
+## v1.3.2
+###Bugfix
+- Fix date step
+
 ## v1.3.1
 ### Bugfix
 - update with menu prop `index`

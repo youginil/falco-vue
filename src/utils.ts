@@ -1,3 +1,5 @@
+import easingFunctions, { EasingKey } from './easing';
+
 export function isString(v: unknown): v is string {
   return typeof v === 'string';
 }
@@ -30,7 +32,8 @@ export function animate(
   from: number,
   to: number,
   duration: number,
-  callback: (v: number) => void
+  callback: (v: number) => void,
+  easing: EasingKey = 'linear'
 ) {
   const start = Date.now();
   const dv = to - from;
@@ -38,7 +41,7 @@ export function animate(
     window.requestAnimationFrame(() => {
       const dt = Date.now() - start;
       if (dt < duration) {
-        callback(from + (dv * dt) / duration);
+        callback(from + dv * easingFunctions[easing](dt / duration));
         step();
       } else {
         callback(to);

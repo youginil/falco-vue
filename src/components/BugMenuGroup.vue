@@ -39,22 +39,34 @@ export default defineComponent({
               ct.style.position = '';
               ct.style.left = '';
               ct.style.height = '0';
-              animate(0, h, 250, (v) => {
-                ct.style.height = `${v}px`;
-                if (v === h) {
-                  ct.style.height = 'auto';
-                  animating = false;
-                }
-              });
+              animate(
+                0,
+                h,
+                250,
+                (v) => {
+                  ct.style.height = `${v}px`;
+                  if (v === h) {
+                    ct.style.height = 'auto';
+                    animating = false;
+                  }
+                },
+                'easeOutCubic'
+              );
             }, 0);
           } else {
             const h = ct.clientHeight;
-            animate(h, 0, 250, (v) => {
-              ct.style.height = `${v}px`;
-              if (v === h) {
-                animating = false;
-              }
-            });
+            animate(
+              h,
+              0,
+              250,
+              (v) => {
+                ct.style.height = `${v}px`;
+                if (v === h) {
+                  animating = false;
+                }
+              },
+              'easeOutCubic'
+            );
           }
         },
       },
