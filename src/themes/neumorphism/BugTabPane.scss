@@ -13,10 +13,6 @@
     display: block;
   }
 
-  &.selected {
-    box-shadow: inset 4px 4px 8px #c8c9cc, inset -4px -4px 8px #ffffff;
-  }
-
   &:not(.selected):hover {
     cursor: pointer;
   }

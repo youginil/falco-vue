@@ -13,12 +13,11 @@
     display: block;
   }
 
-  &.selected {
-    background-color: #ddd;
-  }
+  // &.selected {
+  //   font-weight: bold;
+  // }
 
   &:not(.selected):hover {
-    background-color: #ddd;
     cursor: pointer;
   }
 }
