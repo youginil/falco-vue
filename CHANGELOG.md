@@ -1,6 +1,10 @@
 # Changelog
-## v1.3.2
-###Bugfix
+## v-next
+### Feature
+- Change BugTabs animation
+- Add prop `position` to BugDate
+
+### Bugfix
 - Fix date step
 
 ## v1.3.1

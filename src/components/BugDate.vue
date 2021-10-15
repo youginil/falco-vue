@@ -32,7 +32,13 @@
       <div
         v-show="open"
         class="bug-date-panel"
-        :class="{ show: open }"
+        :class="{
+          show: open,
+          top: pos[0] === 'top',
+          bottom: pos[0] === 'bottom',
+          left: pos[1] === 'left',
+          right: pos[1] === 'right',
+        }"
         @click.stop=""
       >
         <div class="bug-date-header">
@@ -202,6 +208,10 @@ export default defineComponent({
     disabled: {
       type: Boolean,
       default: false,
+    },
+    position: {
+      type: String,
+      default: 'bottom-right',
     },
   },
   setup(props, { emit }) {
@@ -455,6 +465,13 @@ export default defineComponent({
       open.value = false;
     };
 
+    const pos = ref<[string, string]>(['', '']);
+    if (/^(top|bottom)-(left|right)$/.test(props.position)) {
+      pos.value = props.position.split('-') as [string, string];
+    } else {
+      pos.value = ['bottom', 'left'];
+    }
+
     return {
       PanelLevel,
       open,
@@ -479,6 +496,7 @@ export default defineComponent({
       onClickMonth,
       onClickDay,
       onClickToday,
+      pos,
     };
   },
 });
