@@ -23,5 +23,3 @@ import './node_modules/bugui/dist/themes/neumorphism.css';
 [Changelog](https://github.com/lgyin/bugui/blob/main/CHANGELOG.md)
 
 ## TODO
-- datepicker position
-- datepicker inline

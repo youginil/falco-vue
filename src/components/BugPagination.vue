@@ -7,7 +7,7 @@
       v-show="enablePrev"
       class="bug-pagination-prev"
       @click="onPageClick(page - 1)"
-      >Prev</span
+      ></span
     >
     <span
       v-for="(p, i) in leftPages"
@@ -36,7 +36,7 @@
       v-show="enableNext"
       class="bug-pagination-next"
       @click="onPageClick(page + 1)"
-      >Next</span
+      ></span
     >
   </div>
 </template>
