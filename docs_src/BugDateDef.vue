@@ -33,13 +33,6 @@ export default defineComponent({
           default: 'false',
           desc: 'Disabled',
         },
-        {
-          name: 'position',
-          type: 'string',
-          required: false,
-          default: 'bottom-right',
-          desc: 'Panel position. (top|bottom)-(left|right)'
-        }
       ],
       slots: [],
       events: [],

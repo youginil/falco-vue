@@ -1,6 +1,6 @@
 <template>
   <div class="bug-date" :class="{ open: open }" @click="toggleOpen">
-    <div class="bug-date-result">
+    <div class="bug-date-result" ref="resultElem">
       <input
         type="text"
         placeholder="Date"
@@ -29,18 +29,7 @@
       <span class="clear-btn" @click.stop="clear" v-show="clearable"></span>
     </div>
     <transition name="bug-date-panel">
-      <div
-        v-show="open"
-        class="bug-date-panel"
-        :class="{
-          show: open,
-          top: pos[0] === 'top',
-          bottom: pos[0] === 'bottom',
-          left: pos[1] === 'left',
-          right: pos[1] === 'right',
-        }"
-        @click.stop=""
-      >
+      <div v-show="open" class="bug-date-panel" @click.stop="" ref="panelElem">
         <div class="bug-date-header">
           <div>
             <span class="bug-date-2prev" @click="stride(-1)"></span>
@@ -209,13 +198,11 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
-    position: {
-      type: String,
-      default: 'bottom-right',
-    },
   },
   setup(props, { emit }) {
     const { modelValue } = toRefs(props);
+    const resultElem = ref<HTMLDivElement>();
+    const panelElem = ref<HTMLDivElement>();
     const open = ref(false);
     const level = ref(PanelLevel.YearInterval);
 
@@ -277,6 +264,28 @@ export default defineComponent({
       }
       level.value = PanelLevel.Day;
       fillDayData();
+
+      const classList = panelElem.value!.classList;
+      classList.remove('top', 'bottom', 'left', 'right');
+      const { x, y, width, height } = resultElem.value!.getBoundingClientRect();
+      const ww = window.innerWidth;
+      const wh = window.innerHeight;
+      const size = 300;
+      if (wh - y - height >= size || y < size) {
+        classList.add('bottom');
+        if (ww - x - width >= size) {
+          classList.add('right');
+        } else {
+          classList.add('left');
+        }
+      } else {
+        classList.add('top');
+        if (ww - x - width >= size) {
+          classList.add('right');
+        } else {
+          classList.add('left');
+        }
+      }
     };
     const clear = () => {
       emit('update:modelValue', '');
@@ -465,14 +474,9 @@ export default defineComponent({
       open.value = false;
     };
 
-    const pos = ref<[string, string]>(['', '']);
-    if (/^(top|bottom)-(left|right)$/.test(props.position)) {
-      pos.value = props.position.split('-') as [string, string];
-    } else {
-      pos.value = ['bottom', 'left'];
-    }
-
     return {
+      resultElem,
+      panelElem,
       PanelLevel,
       open,
       level,
@@ -496,7 +500,6 @@ export default defineComponent({
       onClickMonth,
       onClickDay,
       onClickToday,
-      pos,
     };
   },
 });

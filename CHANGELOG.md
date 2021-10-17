@@ -2,7 +2,6 @@
 ## v-next
 ### Feature
 - Change BugTabs animation
-- Add prop `position` to BugDate
 
 ### Bugfix
 - Fix date step
