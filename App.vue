@@ -22,26 +22,26 @@
           <p class="mt20">A simple efficient web UI library base on Vue3</p>
         </div>
         <neumorphism-generator v-if="comp === 'Neumorphism'" />
-        <bug-backtop-def v-if="comp === 'BugBacktop'" />
-        <bug-button-def v-if="comp === 'BugButton'" />
-        <bug-checkbox-def v-if="comp === 'BugCheckbox'" />
-        <bug-confirm-def v-if="comp === 'BugConfirm'" />
-        <bug-date-def v-if="comp === 'BugDate'" />
-        <bug-dropdown-def v-if="comp === 'BugDropdown'" />
-        <bug-form-item-def v-if="comp === 'BugFormItem'" />
-        <bug-input-def v-if="comp === 'BugInput'" />
-        <bug-loading-def v-if="comp === 'BugLoading'" />
-        <bug-menu-def v-if="comp === 'BugMenu'" />
-        <bug-message-def v-if="comp === 'BugMessage'" />
-        <bug-modal-def v-if="comp === 'BugModal'" />
-        <bug-pagination-def v-if="comp === 'BugPagination'" />
-        <bug-popover-def v-if="comp === 'BugPopover'" />
-        <bug-radio-def v-if="comp === 'BugRadio'" />
-        <bug-select-def v-if="comp === 'BugSelect'" />
-        <bug-skeleton-def v-if="comp === 'BugSkeleton'" />
-        <bug-table-def v-if="comp === 'BugTable'" />
-        <bug-tabs-def v-if="comp === 'BugTabs'" />
-        <bug-textarea-def v-if="comp === 'BugTextarea'" />
+        <def-backtop v-if="comp === 'BugBacktop'" />
+        <def-button v-if="comp === 'BugButton'" />
+        <def-checkbox v-if="comp === 'BugCheckbox'" />
+        <def-confirm v-if="comp === 'BugConfirm'" />
+        <def-date v-if="comp === 'BugDate'" />
+        <def-dropdown v-if="comp === 'BugDropdown'" />
+        <def-form-item v-if="comp === 'BugFormItem'" />
+        <def-input v-if="comp === 'BugInput'" />
+        <def-loading v-if="comp === 'BugLoading'" />
+        <def-menu v-if="comp === 'BugMenu'" />
+        <def-message v-if="comp === 'BugMessage'" />
+        <def-modal v-if="comp === 'BugModal'" />
+        <def-pagination v-if="comp === 'BugPagination'" />
+        <def-popover v-if="comp === 'BugPopover'" />
+        <def-radio v-if="comp === 'BugRadio'" />
+        <def-select v-if="comp === 'BugSelect'" />
+        <def-skeleton v-if="comp === 'BugSkeleton'" />
+        <def-table v-if="comp === 'BugTable'" />
+        <def-tabs v-if="comp === 'BugTabs'" />
+        <def-textarea v-if="comp === 'BugTextarea'" />
       </div>
     </div>
   </div>
@@ -49,51 +49,51 @@
 
 <script lang="ts">
 import { defineComponent, onBeforeMount, onMounted, ref } from 'vue';
-import BugBacktopDef from './docs_src/BugBacktopDef.vue';
-import BugButtonDef from './docs_src/BugButtonDef.vue';
-import BugCheckboxDef from './docs_src/BugCheckboxDef.vue';
-import BugConfirmDef from './docs_src/BugConfirmDef.vue';
-import BugDateDef from './docs_src/BugDateDef.vue';
-import BugDropdownDef from './docs_src/BugDropdownDef.vue';
-import BugFormItemDef from './docs_src/BugFormItemDef.vue';
-import BugInputDef from './docs_src/BugInputDef.vue';
-import BugLoadingDef from './docs_src/BugLoadingDef.vue';
-import BugMenuDef from './docs_src/BugMenuDef.vue';
-import BugMessageDef from './docs_src/BugMessageDef.vue';
-import BugModalDef from './docs_src/BugModalDef.vue';
-import BugPaginationDef from './docs_src/BugPaginationDef.vue';
-import BugPopoverDef from './docs_src/BugPopoverDef.vue';
-import BugRadioDef from './docs_src/BugRadioDef.vue';
-import BugSelectDef from './docs_src/BugSelectDef.vue';
-import BugSkeletonDef from './docs_src/BugSkeletonDef.vue';
-import BugTableDef from './docs_src/BugTableDef.vue';
-import BugTabsDef from './docs_src/BugTabsDef.vue';
-import BugTextareaDef from './docs_src/BugTextareaDef.vue';
+import DefBacktop from './docs_src/DefBacktop.vue';
+import DefButton from './docs_src/DefButton.vue';
+import DefCheckbox from './docs_src/DefCheckbox.vue';
+import DefConfirm from './docs_src/DefConfirm.vue';
+import DefDate from './docs_src/DefDate.vue';
+import DefDropdown from './docs_src/DefDropdown.vue';
+import DefFormItem from './docs_src/DefFormItem.vue';
+import DefInput from './docs_src/DefInput.vue';
+import DefLoading from './docs_src/DefLoading.vue';
+import DefMenu from './docs_src/DefMenu.vue';
+import DefMessage from './docs_src/DefMessage.vue';
+import DefModal from './docs_src/DefModal.vue';
+import DefPagination from './docs_src/DefPagination.vue';
+import DefPopover from './docs_src/DefPopover.vue';
+import DefRadio from './docs_src/DefRadio.vue';
+import DefSelect from './docs_src/DefSelect.vue';
+import DefSkeleton from './docs_src/DefSkeleton.vue';
+import DefTable from './docs_src/DefTable.vue';
+import DefTabs from './docs_src/DefTabs.vue';
+import DefTextarea from './docs_src/DefTextarea.vue';
 import NeumorphismGenerator from './docs_src/NeumorphismGenerator.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    BugBacktopDef,
-    BugButtonDef,
-    BugCheckboxDef,
-    BugConfirmDef,
-    BugDateDef,
-    BugDropdownDef,
-    BugFormItemDef,
-    BugInputDef,
-    BugLoadingDef,
-    BugMenuDef,
-    BugMessageDef,
-    BugModalDef,
-    BugPaginationDef,
-    BugPopoverDef,
-    BugRadioDef,
-    BugSelectDef,
-    BugSkeletonDef,
-    BugTableDef,
-    BugTabsDef,
-    BugTextareaDef,
+    DefBacktop,
+    DefButton,
+    DefCheckbox,
+    DefConfirm,
+    DefDate,
+    DefDropdown,
+    DefFormItem,
+    DefInput,
+    DefLoading,
+    DefMenu,
+    DefMessage,
+    DefModal,
+    DefPagination,
+    DefPopover,
+    DefRadio,
+    DefSelect,
+    DefSkeleton,
+    DefTable,
+    DefTabs,
+    DefTextarea,
     NeumorphismGenerator,
   },
   setup() {

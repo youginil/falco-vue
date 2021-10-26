@@ -1,10 +1,11 @@
 # Changelog
-## v-next
+## v1.3.2
 ### Feature
 - Change BugTabs animation
 
 ### Bugfix
 - Fix date step
+- Fix Resolve error about BugMenuGroup and BugMenuItem
 
 ## v1.3.1
 ### Bugfix

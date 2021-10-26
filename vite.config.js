@@ -9,7 +9,17 @@ export default ({ command, mode }) => {
       optimizeDeps: {
         entries: path.resolve(__dirname, 'index.html'),
       },
-      plugins: [vue()],
+      plugins: [
+        vue({
+          template: {
+            compilerOptions: {
+              isCustomElement(tag) {
+                return tag === 'sample-code';
+              },
+            },
+          },
+        }),
+      ],
     };
   } else if (command === 'build') {
     return {

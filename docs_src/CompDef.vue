@@ -3,6 +3,19 @@
     <h3 class="comp-title">{{ title }}</h3>
     <div class="examples">
       <slot />
+      <div class="sample-code">
+        <div class="tr">
+          <span
+            class="code-switch"
+            :class="{ open: codeOpen }"
+            @click="codeOpen = !codeOpen"
+            title="Show sample code"
+          ></span>
+        </div>
+        <div class="code-content" v-show="codeOpen">
+          <slot name="code" />
+        </div>
+      </div>
     </div>
     <div class="props" v-if="props.length > 0">
       <h4 class="subtitle">Props</h4>
@@ -41,7 +54,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
+import { defineComponent, PropType, ref } from 'vue';
 import BugTable from '../src/components/BugTable.vue';
 import BugTableColumn from '../src/components/BugTableColumn.vue';
 
@@ -85,7 +98,12 @@ export default defineComponent({
       default: [],
     },
   },
-  setup() {},
+  setup() {
+    const codeOpen = ref(false);
+    return {
+      codeOpen,
+    };
+  },
 });
 </script>
 
@@ -103,6 +121,37 @@ export default defineComponent({
 
 .examples {
   margin-top: 30px;
+}
+
+.sample-code {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eeeeee;
+
+  .code-switch {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(./images/code.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s linear;
+
+    &.open {
+      background-color: #cccccc;
+    }
+
+    &:not(.open):hover {
+      background-color: #dddddd;
+    }
+  }
+
+  .code-content {
+    padding-top: 10px;
+  }
 }
 
 .props,
