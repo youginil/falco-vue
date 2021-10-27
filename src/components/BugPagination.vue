@@ -7,8 +7,7 @@
       v-show="enablePrev"
       class="bug-pagination-prev"
       @click="onPageClick(page - 1)"
-      ></span
-    >
+    ></span>
     <span
       v-for="(p, i) in leftPages"
       :key="i"
@@ -31,13 +30,12 @@
       >{{ p === null ? '...' : p }}</span
     >
     <!-- for mobile -->
-    <span class="bug-page-info">{{ page + ' / ' + pages}}</span>
+    <span class="bug-page-info">{{ page + ' / ' + pages }}</span>
     <span
       v-show="enableNext"
       class="bug-pagination-next"
       @click="onPageClick(page + 1)"
-      ></span
-    >
+    ></span>
   </div>
 </template>
 
@@ -49,11 +47,11 @@ export default defineComponent({
   props: {
     page: {
       type: Number,
-      default: 0,
+      required: true,
     },
     pages: {
       type: Number,
-      default: 0,
+      required: true,
     },
     total: {
       type: Number,

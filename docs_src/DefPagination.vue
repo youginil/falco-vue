@@ -40,7 +40,7 @@ export default defineComponent({
         {
           name: 'total',
           type: 'number',
-          required: true,
+          required: false,
           default: '',
           desc: 'Total number',
         },
