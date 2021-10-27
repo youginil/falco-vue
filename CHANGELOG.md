@@ -1,4 +1,8 @@
 # Changelog
+## v1.3.3
+### Bugfix
+- Fix BugTabs style
+
 ## v1.3.2
 ### Feature
 - Change BugTabs animation

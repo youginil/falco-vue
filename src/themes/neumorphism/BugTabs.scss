@@ -2,23 +2,11 @@
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
-  position: relative;
+  display: inline-block;
 
   &.vertical {
     overflow-x: hidden;
     overflow-y: auto;
     border-bottom: none;
-  }
-
-  .bug-tab-active {
-    width: 0;
-    border-radius: 15px;
-    box-shadow: inset 4px 4px 8px #c8c9cc, inset -4px -4px 8px #ffffff;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    transition: all 0.3s ease-in-out;
   }
 }
