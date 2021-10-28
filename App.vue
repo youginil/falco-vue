@@ -1,17 +1,40 @@
 <template>
   <div class="app">
-    <ul class="app-nav" :class="{ expand: navExpand }">
-      <li class="menu" :class="{ expand: navExpand }" @click="onClickExpand"></li>
-      <li
-        class="nav-item"
-        v-for="item in navs"
-        :key="item"
-        :class="{ selected: comp === item }"
-        @click="onClickMenu(item)"
-      >
-        {{ item }}
-      </li>
-    </ul>
+    <div class="app-nav" :class="{ expand: navExpand }">
+      <span
+        class="menu"
+        :class="{ expand: navExpand }"
+        @click="onClickExpand"
+      ></span>
+      <bug-menu @change="changeMenu" :index="comp" @click.stop="">
+        <bug-menu-item index="Home">Home</bug-menu-item>
+        <bug-menu-group title="Components">
+          <bug-menu-item index="Backtop">Backtop</bug-menu-item>
+          <bug-menu-item index="Button">Button</bug-menu-item>
+          <bug-menu-item index="Checkbox">Checkbox</bug-menu-item>
+          <bug-menu-item index="Confirm">Confirm</bug-menu-item>
+          <bug-menu-item index="Date">Date</bug-menu-item>
+          <bug-menu-item index="Dropdown">Dropdown</bug-menu-item>
+          <bug-menu-item index="FormItem">FormItem</bug-menu-item>
+          <bug-menu-item index="Input">Input</bug-menu-item>
+          <bug-menu-item index="Loading">Loading</bug-menu-item>
+          <bug-menu-item index="Menu">Menu</bug-menu-item>
+          <bug-menu-item index="Message">Message</bug-menu-item>
+          <bug-menu-item index="Modal">Modal</bug-menu-item>
+          <bug-menu-item index="Pagination">Pagination</bug-menu-item>
+          <bug-menu-item index="Popover">Popover</bug-menu-item>
+          <bug-menu-item index="Radio">Radio</bug-menu-item>
+          <bug-menu-item index="Select">Select</bug-menu-item>
+          <bug-menu-item index="Skeleton">Skeleton</bug-menu-item>
+          <bug-menu-item index="Table">Table</bug-menu-item>
+          <bug-menu-item index="Tabs">Tabs</bug-menu-item>
+          <bug-menu-item index="Textarea">Textarea</bug-menu-item>
+        </bug-menu-group>
+        <bug-menu-group title="Tools">
+          <bug-menu-item index="Neumorphism">Neumorphism</bug-menu-item>
+        </bug-menu-group>
+      </bug-menu>
+    </div>
     <div class="app-content">
       <div class="app-content-inner">
         <div class="home" v-if="comp === 'Home'">
@@ -21,27 +44,27 @@
           <h3 class="mt20">Bug UI</h3>
           <p class="mt20">A simple efficient web UI library base on Vue3</p>
         </div>
+        <def-backtop v-if="comp === 'Backtop'" />
+        <def-button v-if="comp === 'Button'" />
+        <def-checkbox v-if="comp === 'Checkbox'" />
+        <def-confirm v-if="comp === 'Confirm'" />
+        <def-date v-if="comp === 'Date'" />
+        <def-dropdown v-if="comp === 'Dropdown'" />
+        <def-form-item v-if="comp === 'FormItem'" />
+        <def-input v-if="comp === 'Input'" />
+        <def-loading v-if="comp === 'Loading'" />
+        <def-menu v-if="comp === 'Menu'" />
+        <def-message v-if="comp === 'Message'" />
+        <def-modal v-if="comp === 'Modal'" />
+        <def-pagination v-if="comp === 'Pagination'" />
+        <def-popover v-if="comp === 'Popover'" />
+        <def-radio v-if="comp === 'Radio'" />
+        <def-select v-if="comp === 'Select'" />
+        <def-skeleton v-if="comp === 'Skeleton'" />
+        <def-table v-if="comp === 'Table'" />
+        <def-tabs v-if="comp === 'Tabs'" />
+        <def-textarea v-if="comp === 'Textarea'" />
         <neumorphism-generator v-if="comp === 'Neumorphism'" />
-        <def-backtop v-if="comp === 'BugBacktop'" />
-        <def-button v-if="comp === 'BugButton'" />
-        <def-checkbox v-if="comp === 'BugCheckbox'" />
-        <def-confirm v-if="comp === 'BugConfirm'" />
-        <def-date v-if="comp === 'BugDate'" />
-        <def-dropdown v-if="comp === 'BugDropdown'" />
-        <def-form-item v-if="comp === 'BugFormItem'" />
-        <def-input v-if="comp === 'BugInput'" />
-        <def-loading v-if="comp === 'BugLoading'" />
-        <def-menu v-if="comp === 'BugMenu'" />
-        <def-message v-if="comp === 'BugMessage'" />
-        <def-modal v-if="comp === 'BugModal'" />
-        <def-pagination v-if="comp === 'BugPagination'" />
-        <def-popover v-if="comp === 'BugPopover'" />
-        <def-radio v-if="comp === 'BugRadio'" />
-        <def-select v-if="comp === 'BugSelect'" />
-        <def-skeleton v-if="comp === 'BugSkeleton'" />
-        <def-table v-if="comp === 'BugTable'" />
-        <def-tabs v-if="comp === 'BugTabs'" />
-        <def-textarea v-if="comp === 'BugTextarea'" />
       </div>
     </div>
   </div>
@@ -97,31 +120,6 @@ export default defineComponent({
     NeumorphismGenerator,
   },
   setup() {
-    const navs = ref([
-      'Home',
-      'Neumorphism',
-      'BugBacktop',
-      'BugButton',
-      'BugCheckbox',
-      'BugConfirm',
-      'BugDate',
-      'BugDropdown',
-      'BugFormItem',
-      'BugInput',
-      'BugLoading',
-      'BugMenu',
-      'BugMessage',
-      'BugModal',
-      'BugPagination',
-      'BugPopover',
-      'BugRadio',
-      'BugSelect',
-      'BugSkeleton',
-      'BugTable',
-      'BugTabs',
-      'BugTextarea',
-    ]);
-
     const comp = ref('Home');
 
     const navExpand = ref(false);
@@ -131,9 +129,10 @@ export default defineComponent({
       navExpand.value = !navExpand.value;
     }
 
-    function onClickMenu(menu: string) {
+    function changeMenu(menu: string) {
       comp.value = menu;
       location.hash = menu;
+      navExpand.value = false;
     }
 
     onMounted(() => {
@@ -145,17 +144,14 @@ export default defineComponent({
     });
 
     onBeforeMount(() => {
-      const hash = location.hash ? location.hash.substring(1) : '';
-      if (navs.value.includes(hash)) {
-        comp.value = hash;
-      }
+      const hash = location.hash ? location.hash.substring(1) : 'Home';
+      comp.value = hash;
     });
 
     return {
-      navs,
       comp,
       navExpand,
-      onClickMenu,
+      changeMenu,
       onClickExpand,
     };
   },
@@ -205,7 +201,7 @@ export default defineComponent({
       left: -300px;
       bottom: 0;
       z-index: 1;
-      transition: all 0.3s linear;
+      transition: all 0.3s ease-in-out;
 
       &.expand {
         left: 0;
@@ -231,27 +227,6 @@ export default defineComponent({
 
       &.expand {
         left: 320px;
-      }
-    }
-
-    & > .nav-item {
-      display: block;
-      font-size: 16px;
-      font-weight: 300;
-      padding: 16px 20px;
-      cursor: pointer;
-      transition: all 0.3s linear;
-
-      &:not(:last-child) {
-        border-bottom: 1px solid #eeeeee;
-      }
-
-      &:not(.selected):hover {
-        background: #eeeeee;
-      }
-
-      &.selected {
-        background: #eeeeee;
       }
     }
   }

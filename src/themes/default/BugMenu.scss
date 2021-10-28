@@ -37,21 +37,21 @@
       overflow: hidden;
       display: none;
     }
+  }
 
-    .bug-menu-item {
-      display: block;
-      padding: 10px 20px;
-      transition: all 0.3s linear;
-      cursor: pointer;
+  .bug-menu-item {
+    display: block;
+    padding: 10px 20px;
+    transition: all 0.3s linear;
+    cursor: pointer;
 
-      &:hover {
-        background-color: #eeeeee;
-      }
+    &:hover {
+      background-color: #eeeeee;
+    }
 
-      &.selected {
-        color: #0366d6;
-        cursor: default;
-      }
+    &.selected {
+      color: #0366d6;
+      cursor: default;
     }
   }
 }

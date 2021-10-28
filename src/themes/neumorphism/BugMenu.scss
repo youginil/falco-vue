@@ -39,26 +39,26 @@
       overflow: hidden;
       display: none;
     }
+  }
 
-    .bug-menu-item {
-      display: block;
-      padding: 10px 20px;
-      margin: 5px 0;
-      transition: color 0.3s linear;
-      cursor: pointer;
+  .bug-menu-item {
+    display: block;
+    padding: 10px 20px;
+    margin: 5px 0;
+    transition: color 0.3s linear;
+    cursor: pointer;
 
-      &:hover {
-        border-radius: 10px;
-        background: #ebecf0;
-        box-shadow: inset 5px 5px 10px #e3e4e8, inset -5px -5px 10px #f3f4f8;
-      }
+    &:hover {
+      border-radius: 10px;
+      background: #ebecf0;
+      box-shadow: inset 5px 5px 10px #e3e4e8, inset -5px -5px 10px #f3f4f8;
+    }
 
-      &.selected {
-        cursor: default;
-        background: #ebecf0;
-        border-radius: 10px;
-        box-shadow: inset 4px 4px 8px #cacbce, inset -4px -4px 8px #ffffff;
-      }
+    &.selected {
+      cursor: default;
+      background: #ebecf0;
+      border-radius: 10px;
+      box-shadow: inset 4px 4px 8px #cacbce, inset -4px -4px 8px #ffffff;
     }
   }
 }

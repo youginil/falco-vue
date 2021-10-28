@@ -27,7 +27,6 @@ export default defineComponent({
     watch(
       () => props.index,
       (v) => {
-        console.log(v);
         if (v !== current.value) {
           current.value = v;
         }

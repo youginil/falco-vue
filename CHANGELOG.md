@@ -1,4 +1,8 @@
 # Changelog
+## v1.3.4
+### Bugfix
+- Fix BugMenu style
+
 ## v1.3.3
 ### Bugfix
 - Fix BugTabs style

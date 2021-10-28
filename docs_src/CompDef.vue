@@ -4,7 +4,7 @@
     <div class="examples">
       <slot />
       <div class="sample-code">
-        <div class="tr">
+        <div>
           <span
             class="code-switch"
             :class="{ open: codeOpen }"
