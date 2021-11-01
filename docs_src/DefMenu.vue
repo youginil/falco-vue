@@ -73,6 +73,10 @@ export default defineComponent({
           name: 'default',
           desc: 'Group content',
         },
+        {
+          name: 'title',
+          desc: 'Custom group title',
+        },
       ],
       events: [],
     });

@@ -23,3 +23,4 @@ import './node_modules/bugui/dist/themes/neumorphism.css';
 [Changelog](https://github.com/lgyin/bugui/blob/main/CHANGELOG.md)
 
 ## TODO
+- BugMenu render twice while operating

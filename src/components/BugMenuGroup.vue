@@ -7,7 +7,7 @@ export default defineComponent({
   props: {
     title: {
       type: String,
-      required: true,
+      default: ''
     },
   },
   data() {
@@ -18,6 +18,7 @@ export default defineComponent({
   render() {
     const that = this;
     let animating = false;
+    const titleSlot = this.$slots.title;
     const title = h(
       'p',
       {
@@ -70,7 +71,7 @@ export default defineComponent({
           }
         },
       },
-      [this.$props.title]
+      [titleSlot ? titleSlot() : this.$props.title]
     );
     const slot = this.$slots.default;
     const content = h(

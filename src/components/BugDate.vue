@@ -273,14 +273,14 @@ export default defineComponent({
       const size = 300;
       if (wh - y - height >= size || y < size) {
         classList.add('bottom');
-        if (ww - x - width >= size) {
+        if (ww - x >= size) {
           classList.add('right');
         } else {
           classList.add('left');
         }
       } else {
         classList.add('top');
-        if (ww - x - width >= size) {
+        if (ww - x >= size) {
           classList.add('right');
         } else {
           classList.add('left');
@@ -326,7 +326,7 @@ export default defineComponent({
       if (monthData.value.length === 0) {
         const result: MonthData = [];
         for (let i = 1; i <= 12; i++) {
-          result.push({ month: i, label: `${i}月` });
+          result.push({ month: i, label: `${i}` });
         }
         monthData.value = result;
       }

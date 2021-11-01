@@ -1,4 +1,11 @@
 # Changelog
+## v next
+### Feature
+- Add `title` slot to BugMenuGroup
+
+### Bugfix
+- Fix BugDate position
+
 ## v1.3.4
 ### Bugfix
 - Fix BugMenu style
