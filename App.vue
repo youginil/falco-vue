@@ -159,6 +159,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+@use "sass:math";
+
 @mixin pc {
   @media screen and (min-width: 800px) {
     @content;
@@ -212,21 +214,44 @@ export default defineComponent({
       }
     }
 
+    $menu-size: 30px;
     .menu {
       display: inline-block;
-      width: 40px;
-      height: 40px;
-      background-image: url(./docs_src/images/list.png);
-      background-size: cover;
-      background-repeat: no-repeat;
+      width: $menu-size;
+      height: $menu-size;
       cursor: pointer;
       transition: all 0.3s linear;
       position: fixed;
-      top: 20px;
+      top: 10px;
       left: 20px;
+
+      &::before, &::after {
+        display: inline-block;
+        content: '';
+        width: $menu-size - 10px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        left: 5px;
+      }
+      &::before {
+        top: math.div($menu-size, 3);
+      }
+      &::after {
+        top: math.div($menu-size, 3) * 2;
+      }
 
       &.expand {
         left: 320px;
+
+        &::before {
+          top: math.div($menu-size, 2);
+          transform: rotate(45deg);
+        }
+        &::after {
+          top: math.div($menu-size, 2);
+          transform: rotate(-45deg);
+        }
       }
     }
   }
