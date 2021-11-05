@@ -5,6 +5,7 @@
 
 ### Bugfix
 - Fix BugDate position
+- Fix BugPopover animation
 
 ## v1.3.4
 ### Bugfix

@@ -154,15 +154,15 @@ $small-triangle-offset: -$small-triangle-width;
   }
 }
 
-.bug-popover-enter,
+.bug-popover-enter-from,
 .bug-popover-leave-to {
   opacity: 0;
 }
 .bug-popover-enter-to,
-.bug-popover-leave {
+.bug-popover-leave-from {
   opacity: 1;
 }
 .bug-popover-enter-active,
 .bug-popover-leave-active {
-  transition: opacity 0.2s ease;
+  transition: all 0.3s ease-in-out;
 }
