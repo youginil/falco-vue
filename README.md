@@ -4,7 +4,7 @@ A simple efficient web UI library base on Vue 3.
 
 [Document](https://lgyin.github.io/bugui)
 
-## Basic usage
+## Usage
 ```
 import BugUI from 'bugui';
 import './node_modules/bugui/dist/bugui.css';
@@ -14,7 +14,7 @@ createApp(App).use(BugUI).mount('#app');
 ```
 
 ## Changelog
-[Changelog](https://github.com/lgyin/bugui/blob/main/CHANGELOG.md)
+[Changelog](https://lgyin.github.io/bugui/#Changelog)
 
 ## TODO
 - BugMenu render twice while operating
