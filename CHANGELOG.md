@@ -1,6 +1,7 @@
 # Changelog
-## v next
+## v2.0.0
 ### Feature
+- Remove Neumorphism theme
 - Add `title` slot to BugMenuGroup
 
 ### Bugfix

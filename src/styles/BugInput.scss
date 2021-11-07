@@ -4,34 +4,43 @@
   position: relative;
 
   input {
-    border-radius: 20px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    color: #24292e;
+    background-color: #fafbfc;
     font-size: 14px;
-    line-height: 22px;
+    line-height: 20px;
     outline: none;
-    padding: 5px 16px;
+    transition: all 0.3s linear;
+    padding: 5px 12px;
     width: 100%;
-    background: $main-color;
-    box-shadow: inset 3px 3px 6px #c8c9cc, inset -3px -3px 6px #ffffff;
+
     &::placeholder {
       color: #a3aab1;
     }
+    &:not(:disabled):focus {
+      border-color: #0366d6;
+      box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
+      background-color: #ffffff;
+    }
     &:disabled {
-      opacity: 0.6;
+      background-color: #f3f4f6;
+      color: #959da5;
     }
   }
 
   $clear-size: 18px;
-  & > .clear {
+  &:not(:disabled) > .clear {
     display: inline-block;
     width: $clear-size;
     height: $clear-size;
-    background-image: url(../../images/x.png);
+    background-image: url(../images/x.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     cursor: pointer;
     opacity: 0.3;
-    transition: opacity .3s linear;
+    transition: opacity 0.3s linear;
     position: absolute;
     top: 50%;
     margin-top: math.div(-$clear-size, 2);

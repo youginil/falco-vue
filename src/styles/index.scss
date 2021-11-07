@@ -1,18 +1,6 @@
 @use "sass:math";
-@import './var.scss';
-@import '../../styles/normalize.scss';
-@import '../../styles/shorthand.scss';
-
-html,
-body {
-  background-color: $main-color;
-  color: $main-font-color;
-}
-button,
-input,
-textarea {
-  color: $main-font-color;
-}
+@import 'normalize.scss';
+@import 'shorthand.scss';
 
 @import 'BugBacktop.scss';
 @import 'BugButton.scss';

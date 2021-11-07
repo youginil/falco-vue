@@ -3,18 +3,15 @@ const path = require('path');
 // https://vitejs.dev/config/
 export default () => {
   return {
+    publicDir: false,
     build: {
       emptyOutDir: false,
       rollupOptions: {
         input: {
-          default: path.resolve(__dirname, 'src/themes/default/index.scss'),
-          neumorphism: path.resolve(
-            __dirname,
-            'src/themes/neumorphism/index.scss'
-          ),
+          bugui: path.resolve(__dirname, 'src/styles/index.scss'),
         },
         output: {
-          assetFileNames: () => 'themes/[name].[ext]',
+          assetFileNames: () => '[name].[ext]',
         },
       },
       assetsInlineLimit: 1024 ** 3,

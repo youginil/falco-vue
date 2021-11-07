@@ -3,7 +3,6 @@ const path = require('path');
 
 // https://vitejs.dev/config/
 export default ({ command, mode }) => {
-  console.log(command, mode);
   if (command === 'serve') {
     return {
       optimizeDeps: {
@@ -23,6 +22,7 @@ export default ({ command, mode }) => {
     };
   } else if (command === 'build') {
     return {
+      publicDir: false,
       build: {
         lib: {
           entry: path.resolve(__dirname, 'src/index.ts'),

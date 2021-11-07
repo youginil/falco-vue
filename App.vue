@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <bug-backtop target=".app-content"></bug-backtop>
     <div class="app-nav" :class="{ expand: navExpand }">
       <span
         class="menu"
@@ -30,9 +31,7 @@
           <bug-menu-item index="Tabs">Tabs</bug-menu-item>
           <bug-menu-item index="Textarea">Textarea</bug-menu-item>
         </bug-menu-group>
-        <bug-menu-group title="Tools">
-          <bug-menu-item index="Neumorphism">Neumorphism</bug-menu-item>
-        </bug-menu-group>
+        <bug-menu-item index="Changelog">Changelog</bug-menu-item>
       </bug-menu>
     </div>
     <div class="app-content">
@@ -64,7 +63,9 @@
         <def-table v-if="comp === 'Table'" />
         <def-tabs v-if="comp === 'Tabs'" />
         <def-textarea v-if="comp === 'Textarea'" />
-        <neumorphism-generator v-if="comp === 'Neumorphism'" />
+        <div v-if="comp === 'Changelog'">
+          <change-log />
+        </div>
       </div>
     </div>
   </div>
@@ -92,7 +93,6 @@ import DefSkeleton from './docs_src/DefSkeleton.vue';
 import DefTable from './docs_src/DefTable.vue';
 import DefTabs from './docs_src/DefTabs.vue';
 import DefTextarea from './docs_src/DefTextarea.vue';
-import NeumorphismGenerator from './docs_src/NeumorphismGenerator.vue';
 
 export default defineComponent({
   name: 'App',
@@ -117,7 +117,6 @@ export default defineComponent({
     DefTable,
     DefTabs,
     DefTextarea,
-    NeumorphismGenerator,
   },
   setup() {
     const comp = ref('Home');
@@ -159,7 +158,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@use "sass:math";
+@use 'sass:math';
 
 @mixin pc {
   @media screen and (min-width: 800px) {
@@ -184,7 +183,6 @@ export default defineComponent({
   }
 
   & > .app-nav {
-    background-color: #ffffff;
     border-right: 1px solid #eeeeee;
     width: 300px;
     overflow-y: auto;
@@ -225,7 +223,8 @@ export default defineComponent({
       top: 10px;
       left: 20px;
 
-      &::before, &::after {
+      &::before,
+      &::after {
         display: inline-block;
         content: '';
         width: $menu-size - 10px;
