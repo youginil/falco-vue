@@ -8,7 +8,7 @@ export default () => {
       emptyOutDir: false,
       rollupOptions: {
         input: {
-          bugui: path.resolve(__dirname, 'src/styles/index.scss'),
+          style: path.resolve(__dirname, 'src/styles/index.scss'),
         },
         output: {
           assetFileNames: () => '[name].[ext]',
