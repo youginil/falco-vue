@@ -1,6 +1,6 @@
 # Changelog
 ## v2.0.1
-- Rename generated file name
+- Rename generated file
 
 ## v2.0.0
 ### Feature
