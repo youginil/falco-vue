@@ -1,13 +1,12 @@
-# Changelog
 ## v2.0.1
 - Rename generated file
 
 ## v2.0.0
-### Feature
+#### Feature
 - Remove Neumorphism theme
 - Add `title` slot to BugMenuGroup
 
-### Bugfix
+#### Bugfix
 - Fix BugDate position
 - Fix BugPopover animation
 
@@ -16,27 +15,27 @@
 - Fix BugMenu style
 
 ## v1.3.3
-### Bugfix
+#### Bugfix
 - Fix BugTabs style
 
 ## v1.3.2
-### Feature
+#### Feature
 - Change BugTabs animation
 
-### Bugfix
+#### Bugfix
 - Fix date step
 - Fix Resolve error about BugMenuGroup and BugMenuItem
 
 ## v1.3.1
-### Bugfix
+#### Bugfix
 - update with menu prop `index`
 
 ## v1.3.0
-### Feature
+#### Feature
 - Add BugMenu component
 
 ## v1.2.0
-### Feature
+#### Feature
 - Add prop `disabled` to BugDate
 - Remove prop `name` from BugRadioGroup
 - Add prop `size` to BugLoading
@@ -44,7 +43,7 @@
 - Neumorphism generator on document
 
 ## v1.1.11
-### Feature
+#### Feature
 - Adapt to mobile
 
 ## v1.1.9
