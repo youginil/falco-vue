@@ -38,7 +38,7 @@ export default defineComponent({
       type: [Number, String],
     },
   },
-  setup(props, { emit }) {
+  setup(props) {
     const btnStyle = computed(() => {
       const s: Record<string, unknown> = {};
       if (props.width) {

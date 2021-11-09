@@ -13,7 +13,7 @@ export default ({ command, mode }) => {
           template: {
             compilerOptions: {
               isCustomElement(tag) {
-                return tag === 'sample-code';
+                return tag === 'sample-code' || tag === 'change-log';
               },
             },
           },

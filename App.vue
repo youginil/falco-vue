@@ -202,6 +202,7 @@ export default defineComponent({
       bottom: 0;
       z-index: 1;
       transition: all 0.3s ease-in-out;
+      background-color: #ffffff;
 
       &.expand {
         left: 0;
