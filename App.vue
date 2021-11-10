@@ -8,30 +8,77 @@
         @click="onClickExpand"
       ></span>
       <bug-menu @change="changeMenu" :index="comp" @click.stop="">
-        <bug-menu-item index="Home">Home</bug-menu-item>
-        <bug-menu-group title="Components">
-          <bug-menu-item index="Backtop">Backtop</bug-menu-item>
-          <bug-menu-item index="Button">Button</bug-menu-item>
-          <bug-menu-item index="Checkbox">Checkbox</bug-menu-item>
-          <bug-menu-item index="Confirm">Confirm</bug-menu-item>
-          <bug-menu-item index="Date">Date</bug-menu-item>
-          <bug-menu-item index="Dropdown">Dropdown</bug-menu-item>
-          <bug-menu-item index="FormItem">FormItem</bug-menu-item>
-          <bug-menu-item index="Input">Input</bug-menu-item>
-          <bug-menu-item index="Loading">Loading</bug-menu-item>
-          <bug-menu-item index="Menu">Menu</bug-menu-item>
-          <bug-menu-item index="Message">Message</bug-menu-item>
-          <bug-menu-item index="Modal">Modal</bug-menu-item>
-          <bug-menu-item index="Pagination">Pagination</bug-menu-item>
-          <bug-menu-item index="Popover">Popover</bug-menu-item>
-          <bug-menu-item index="Radio">Radio</bug-menu-item>
-          <bug-menu-item index="Select">Select</bug-menu-item>
-          <bug-menu-item index="Skeleton">Skeleton</bug-menu-item>
-          <bug-menu-item index="Table">Table</bug-menu-item>
-          <bug-menu-item index="Tabs">Tabs</bug-menu-item>
-          <bug-menu-item index="Textarea">Textarea</bug-menu-item>
+        <bug-menu-item index="Home">
+          <app-menu icon="home">Home</app-menu>
+        </bug-menu-item>
+        <bug-menu-group>
+          <template #title>
+            <app-menu icon="cubes">Components</app-menu>
+          </template>
+          <bug-menu-item index="Backtop">
+            <app-menu icon="arrow-circle-up">Backtop</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Button">
+            <app-menu icon="play-circle">Button</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Checkbox">
+            <app-menu icon="check-square">Checkbox</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Confirm">
+            <app-menu icon="bolt">Confirm</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Date">
+            <app-menu icon="calendar-alt">Date</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Dropdown">
+            <app-menu icon="bars">Dropdown</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="FormItem">
+            <app-menu icon="grip-vertical">FormItem</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Input">
+            <app-menu icon="keyboard">Input</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Loading">
+            <app-menu icon="spinner">Loading</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Menu">
+            <app-menu icon="compass">Menu</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Message">
+            <app-menu icon="info-circle">Message</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Modal">
+            <app-menu icon="window-restore">Modal</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Pagination">
+            <app-menu icon="ellipsis-h">Pagination</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Popover">
+            <app-menu icon="comment-alt">Popover</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Radio">
+            <app-menu icon="check-circle">Radio</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Select">
+            <app-menu icon="grip-horizontal">Select</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Skeleton">
+            <app-menu icon="sad-cry">Skeleton</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Table">
+            <app-menu icon="table">Table</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Tabs">
+            <app-menu icon="mars-double">Tabs</app-menu>
+          </bug-menu-item>
+          <bug-menu-item index="Textarea">
+            <app-menu icon="file-alt">Textarea</app-menu>
+          </bug-menu-item>
         </bug-menu-group>
-        <bug-menu-item index="Changelog">Changelog</bug-menu-item>
+        <bug-menu-item index="Changelog">
+          <app-menu icon="list-ol">Changelog</app-menu>
+        </bug-menu-item>
       </bug-menu>
     </div>
     <div class="app-content">
@@ -93,6 +140,7 @@ import DefSkeleton from './docs_src/DefSkeleton.vue';
 import DefTable from './docs_src/DefTable.vue';
 import DefTabs from './docs_src/DefTabs.vue';
 import DefTextarea from './docs_src/DefTextarea.vue';
+import AppMenu from './components/AppMenu.vue';
 
 export default defineComponent({
   name: 'App',
@@ -117,6 +165,7 @@ export default defineComponent({
     DefTable,
     DefTabs,
     DefTextarea,
+    AppMenu,
   },
   setup() {
     const comp = ref('Home');

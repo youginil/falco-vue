@@ -11,7 +11,7 @@
 - Fix BugPopover animation
 
 ## v1.3.4
-### Bugfix
+#### Bugfix
 - Fix BugMenu style
 
 ## v1.3.3
