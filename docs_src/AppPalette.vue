@@ -1683,6 +1683,11 @@ export default defineComponent({
 .color-table {
   width: 100%;
   margin: 15px 0 25px 0;
+  background: #f8f9fa;
+
+  thead {
+    background: #eaecf0;
+  }
 
   th,
   td {
