@@ -76,6 +76,9 @@
             <app-menu icon="file-alt">Textarea</app-menu>
           </bug-menu-item>
         </bug-menu-group>
+        <bug-menu-item index="Palette">
+          <app-menu icon="palette">Palette</app-menu>
+        </bug-menu-item>
         <bug-menu-item index="Changelog">
           <app-menu icon="list-ol">Changelog</app-menu>
         </bug-menu-item>
@@ -110,6 +113,9 @@
         <def-table v-if="comp === 'Table'" />
         <def-tabs v-if="comp === 'Tabs'" />
         <def-textarea v-if="comp === 'Textarea'" />
+        <div v-if="comp === 'Palette'">
+          <app-palette />
+        </div>
         <div v-if="comp === 'Changelog'">
           <change-log />
         </div>
@@ -140,6 +146,7 @@ import DefSkeleton from './docs_src/DefSkeleton.vue';
 import DefTable from './docs_src/DefTable.vue';
 import DefTabs from './docs_src/DefTabs.vue';
 import DefTextarea from './docs_src/DefTextarea.vue';
+import AppPalette from './docs_src/AppPalette.vue';
 import AppMenu from './components/AppMenu.vue';
 
 export default defineComponent({
@@ -166,6 +173,7 @@ export default defineComponent({
     DefTabs,
     DefTextarea,
     AppMenu,
+    AppPalette,
   },
   setup() {
     const comp = ref('Home');

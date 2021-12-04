@@ -138,7 +138,7 @@ export default defineComponent({
     background-position: center;
     border-radius: 4px;
     cursor: pointer;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
 
     &.open {
       background-color: #cccccc;

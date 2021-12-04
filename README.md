@@ -17,5 +17,5 @@ createApp(App).use(BugUI).mount('#app');
 [Changelog](https://lgyin.github.io/bugui/#Changelog)
 
 ## TODO
-- BugMenu render twice while operating
-- Upload
+- Upload with preview and progress
+- Progress

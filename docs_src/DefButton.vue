@@ -8,6 +8,7 @@
     <sam-button></sam-button>
     <template #code>
       <sample-code src="SamButton" />
+      <live-sample src="SamButton" />
     </template>
   </comp-def>
 </template>
@@ -16,10 +17,11 @@
 import { defineComponent, ref } from 'vue';
 import CompDef, { CompAPI } from './CompDef.vue';
 import SamButton from './samples/SamButton.vue';
+import LiveSample from './LiveSample.vue';
 
 export default defineComponent({
   name: 'DefButton',
-  components: { CompDef, SamButton },
+  components: { CompDef, SamButton, LiveSample },
   setup() {
     const buttonApi = ref<CompAPI>({
       props: [
