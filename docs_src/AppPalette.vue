@@ -2,7 +2,7 @@
   <div>
     <div v-for="(item, index) in list" :key="index">
       <h3>{{ item.series }}</h3>
-      <table class="color-table">
+      <table class="color-table" @click="pickColor">
         <thead>
           <tr>
             <th>Name</th>
@@ -17,8 +17,15 @@
             <td>{{ color.name }}</td>
             <td>{{ color.romanized }}</td>
             <td>{{ color.en }}</td>
-            <td :style="{ background: color.hex }">{{ color.rgb }}</td>
-            <td :style="{ background: color.hex }">{{ color.hex }}</td>
+            <td
+              :style="{ background: color.hex }"
+              :data-value="'rgb(' + color.rgb + ')'"
+            >
+              {{ color.rgb }}
+            </td>
+            <td :style="{ background: color.hex }" :data-value="color.hex">
+              {{ color.hex }}
+            </td>
           </tr>
         </tbody>
       </table>
@@ -28,6 +35,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
+import { BugMessage } from '../src/index';
 
 export default defineComponent({
   setup() {
@@ -1674,7 +1682,25 @@ export default defineComponent({
         ],
       },
     ]);
-    return { list };
+
+    function pickColor(e: PointerEvent) {
+      const target = e.target;
+      let value: string | undefined;
+      if (
+        navigator.clipboard &&
+        target instanceof HTMLTableCellElement &&
+        (value = target.dataset['value'])
+      ) {
+        navigator.clipboard.writeText(value).then(() => {
+          BugMessage.info(
+            '<strong>' + value + '</strong> <i>copied</i>',
+            true
+          );
+        });
+      }
+    }
+
+    return { list, pickColor };
   },
 });
 </script>
