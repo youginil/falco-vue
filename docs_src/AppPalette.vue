@@ -1683,7 +1683,7 @@ export default defineComponent({
       },
     ]);
 
-    function pickColor(e: PointerEvent) {
+    function pickColor(e: MouseEvent) {
       const target = e.target;
       let value: string | undefined;
       if (
