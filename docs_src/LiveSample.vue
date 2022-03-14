@@ -8,8 +8,6 @@
 import { defineComponent, onMounted } from 'vue';
 import * as sfc from '@vue/compiler-sfc';
 
-console.log(sfc);
-
 export default defineComponent({
   name: 'LiveSample',
   props: {
@@ -26,7 +24,6 @@ export default defineComponent({
         })
         .then((response) => {
           const result = sfc.parse(response);
-          console.log(result);
         });
     });
   },
