@@ -25,8 +25,8 @@ import BugTabs from './components/BugTabs.vue';
 import BugTextarea from './components/BugTextarea.vue';
 import BugFormItem from './components/BugFormItem.vue';
 
-import BugMessage from './global/message';
-import BugConfirm from './global/confirm';
+import message from './global/message';
+import confirm from './global/confirm';
 
 const components = [
   BugBacktop,
@@ -64,4 +64,5 @@ export default {
   },
 };
 
-export { BugMessage, BugConfirm };
+export { message, confirm };
+

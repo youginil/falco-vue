@@ -1,5 +1,3 @@
-import BugUI, { BugConfirm, BugMessage } from "./src"
+import bugui from "./src"
 
-export {BugMessage, BugConfirm}
-
-export default BugUI
+export default bugui;

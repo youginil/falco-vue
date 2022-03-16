@@ -9,21 +9,21 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { BugMessage } from '../../src';
+import bugui from '../../src';
 
 export default defineComponent({
   setup() {
     function info() {
-      BugMessage.info('This is info');
+      bugui.message.info('This is info');
     }
     function warn() {
-      BugMessage.warn('This is warning');
+      bugui.message.warn('This is warning');
     }
     function error() {
-      BugMessage.error('This is error');
+      bugui.message.error('This is error');
     }
     function success() {
-      BugMessage.success('This is success');
+      bugui.message.success('This is success');
     }
     return { info, warn, error, success };
   },

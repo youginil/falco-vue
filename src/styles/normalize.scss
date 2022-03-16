@@ -1,12 +1,13 @@
 *,
 *::before,
 *::after {
-  border: 0;
+  border: none;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   vertical-align: top;
   outline: none;
+  font-size: inherit;
 }
 
 input::-webkit-outer-spin-button,

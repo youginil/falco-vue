@@ -19,3 +19,4 @@ createApp(App).use(BugUI).mount('#app');
 ## TODO
 - Upload with preview and progress
 - Progress
+- add `ContextMenu`

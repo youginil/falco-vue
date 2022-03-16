@@ -1,3 +1,9 @@
+## v2.1.0
+- `BugMessage` -> `bugui.message`, `BugConfirm` -> `bugui.confirm`
+
+### Bugfix
+- Remove border of input in webview
+
 ## v2.0.1
 - Rename generated file
 

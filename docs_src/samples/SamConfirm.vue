@@ -6,12 +6,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { BugConfirm } from '../../src';
+import bugui from '../../src';
 
 export default defineComponent({
   setup() {
     function confirm() {
-      BugConfirm('Do you want do this?').then(() => {
+      bugui.confirm('Do you want do this?').then(() => {
         //
       });
     }

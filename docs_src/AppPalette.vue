@@ -35,7 +35,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import { BugMessage } from '../src/index';
+import bugui from '../src';
 
 export default defineComponent({
   setup() {
@@ -1692,7 +1692,7 @@ export default defineComponent({
         (value = target.dataset['value'])
       ) {
         navigator.clipboard.writeText(value).then(() => {
-          BugMessage.info(
+          bugui.message.info(
             '<strong>' + value + '</strong> <i>copied</i>',
             true
           );
