@@ -1,3 +1,7 @@
+## v2.1.1
+### Bugfix
+- add declaration of `message` and `confirm`
+
 ## v2.1.0
 - `BugMessage` -> `bugui.message`, `BugConfirm` -> `bugui.confirm`
 
