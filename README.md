@@ -1,20 +1,22 @@
-# BugUI
+# Bug
 
 A simple efficient web UI library base on Vue 3.
 
-[Document](https://lgyin.github.io/bugui)
+[Document](https://youginil.github.io/bug-vue)
 
 ## Usage
 ```
-import BugUI from 'bugui';
-import './node_modules/bugui/dist/style.css';
+import bug, {message} from 'bug-vue';
+import './node_modules/bug-vue/dist/style.css';
 import App from './App.vue';
 
-createApp(App).use(BugUI).mount('#app');
+createApp(App).use(bug).mount('#app');
+
+message.info('Hello World!!!');
 ```
 
 ## Changelog
-[Changelog](https://lgyin.github.io/bugui/#Changelog)
+[Changelog](https://youginil.github.io/bug-vue/#Changelog)
 
 ## TODO
 - Upload with preview and progress

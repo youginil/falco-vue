@@ -1,15 +1,15 @@
 <template>
-  <comp-def
-    title="BugConfirm"
-    :props="confirmApi.props"
-    :slots="confirmApi.slots"
-    :events="confirmApi.events"
-  >
-    <sam-confirm />
-    <template #code>
-      <sample-code src="SamConfirm" />
-    </template>
-  </comp-def>
+    <comp-def
+        title="BugConfirm"
+        :props="confirmApi.props"
+        :slots="confirmApi.slots"
+        :events="confirmApi.events"
+    >
+        <sam-confirm />
+        <template #code>
+            <sample-code src="SamConfirm" />
+        </template>
+    </comp-def>
 </template>
 
 <script lang="ts">
@@ -18,16 +18,16 @@ import CompDef, { CompAPI } from './CompDef.vue';
 import SamConfirm from './samples/SamConfirm.vue';
 
 export default defineComponent({
-  name: 'DefConfirm',
-  components: { CompDef, SamConfirm },
-  setup() {
-    const confirmApi = ref<CompAPI>({
-      props: [],
-      slots: [],
-      events: [],
-    });
+    name: 'DefConfirm',
+    components: { CompDef, SamConfirm },
+    setup() {
+        const confirmApi = ref<CompAPI>({
+            props: [],
+            slots: [],
+            events: [],
+        });
 
-    return { confirmApi };
-  },
+        return { confirmApi };
+    },
 });
 </script>

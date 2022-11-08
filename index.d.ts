@@ -1,6 +1,5 @@
-import bugui, { message, confirm } from './src';
+import bug, { message, confirm } from './src';
 
-export default bugui;
+export default bug;
 
 export { message, confirm };
-

@@ -29,40 +29,39 @@ import message from './global/message';
 import confirm from './global/confirm';
 
 const components = [
-  BugBacktop,
-  BugButton,
-  BugCheckbox,
-  BugCheckboxGroup,
-  BugDate,
-  BugDropdown,
-  BugDropdownItem,
-  BugInput,
-  BugLoading,
-  BugMenu,
-  BugMenuGroup,
-  BugMenuItem,
-  BugModal,
-  BugPagination,
-  BugPopover,
-  BugRadio,
-  BugRadioGroup,
-  BugSelect,
-  BugSkeleton,
-  BugTable,
-  BugTableColumn,
-  BugTabPane,
-  BugTabs,
-  BugTextarea,
-  BugFormItem,
+    BugBacktop,
+    BugButton,
+    BugCheckbox,
+    BugCheckboxGroup,
+    BugDate,
+    BugDropdown,
+    BugDropdownItem,
+    BugInput,
+    BugLoading,
+    BugMenu,
+    BugMenuGroup,
+    BugMenuItem,
+    BugModal,
+    BugPagination,
+    BugPopover,
+    BugRadio,
+    BugRadioGroup,
+    BugSelect,
+    BugSkeleton,
+    BugTable,
+    BugTableColumn,
+    BugTabPane,
+    BugTabs,
+    BugTextarea,
+    BugFormItem,
 ];
 
 export default {
-  install(app: App): void {
-    components.forEach((com) => {
-      app.component(com.name, com);
-    });
-  },
+    install(app: App): void {
+        components.forEach((com) => {
+            app.component(com.name, com);
+        });
+    },
 };
 
 export { message, confirm };
-

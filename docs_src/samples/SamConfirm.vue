@@ -1,22 +1,22 @@
 <template>
-  <div>
-    <bug-button @click="confirm">Confirm</bug-button>
-  </div>
+    <div>
+        <bug-button @click="cfm">Confirm</bug-button>
+    </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import bugui from '../../src';
+import { confirm } from '../../src';
 
 export default defineComponent({
-  setup() {
-    function confirm() {
-      bugui.confirm('Do you want do this?').then(() => {
-        //
-      });
-    }
+    setup() {
+        function cfm() {
+            confirm('Do you want do this?').then(() => {
+                //
+            });
+        }
 
-    return { confirm };
-  },
+        return { cfm };
+    },
 });
 </script>

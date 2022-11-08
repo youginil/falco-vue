@@ -1,39 +1,39 @@
 <template>
-  <bug-popover
-    :position="position"
-    :trigger="trigger"
-    :width="width"
-    :padding="0"
-  >
-    <slot />
-    <template #pop>
-      <div class="bug-dropdown">
-        <slot name="dropdown" />
-      </div>
-    </template>
-  </bug-popover>
+    <bug-popover
+        :position="position"
+        :trigger="trigger"
+        :width="width"
+        :padding="0"
+    >
+        <slot />
+        <template #pop>
+            <div class="bug-dropdown">
+                <slot name="dropdown" />
+            </div>
+        </template>
+    </bug-popover>
 </template>
 
 <script lang="ts">
-import {defineComponent, PropType}from 'vue';
+import { defineComponent, PropType } from 'vue';
 import BugPopover, { PopPosition } from './BugPopover.vue';
 
 export default defineComponent({
-  name: 'BugDropdown',
-  components: {BugPopover},
-  props: {
-    position: {
-      type: String as PropType<PopPosition>,
-      default: 'bottom-middle'
+    name: 'BugDropdown',
+    components: { BugPopover },
+    props: {
+        position: {
+            type: String as PropType<PopPosition>,
+            default: 'bottom-middle',
+        },
+        trigger: {
+            type: String as PropType<'hover' | 'click'>,
+            default: 'hover',
+        },
+        width: {
+            type: [String, Number],
+            default: '',
+        },
     },
-    trigger: {
-      type: String as PropType<'hover' | 'click'>,
-      default: 'hover'
-    },
-    width: {
-      type: [String, Number],
-      default: ''
-    }
-  }
-})
+});
 </script>
