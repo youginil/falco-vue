@@ -49,7 +49,7 @@ export default ({ command, mode }) => {
         base: '',
         build: {
             outDir: path.resolve(__dirname, 'docs'),
-            sourcemap: true,
+            sourcemap: false,
         },
         plugins: [sampleCodePlugin, vue()],
         rollupOptions: {},
