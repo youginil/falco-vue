@@ -1,15 +1,15 @@
 <template>
     <div>
-        <bug-input
+        <fa-input
             class="mr10"
             :clearable="true"
             v-model="inputText"
-        ></bug-input>
-        <bug-input
+        ></fa-input>
+        <fa-input
             placeholder="number"
             type="number"
             v-model="inputNumber"
-        ></bug-input>
+        ></fa-input>
     </div>
 </template>
 

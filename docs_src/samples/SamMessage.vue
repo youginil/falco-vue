@@ -1,9 +1,9 @@
 <template>
     <div>
-        <bug-button class="m10" @click="info">Info</bug-button>
-        <bug-button class="m10" @click="warn">Warning</bug-button>
-        <bug-button class="m10" @click="error">Error</bug-button>
-        <bug-button @click="success" class="m10">Success</bug-button>
+        <fa-button class="m10" @click="info">Info</fa-button>
+        <fa-button class="m10" @click="warn">Warning</fa-button>
+        <fa-button class="m10" @click="error">Error</fa-button>
+        <fa-button @click="success" class="m10">Success</fa-button>
     </div>
 </template>
 

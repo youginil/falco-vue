@@ -1,6 +1,6 @@
 <template>
     <comp-def
-        title="BugModal"
+        title="FaModal"
         :props="modalApi.props"
         :slots="modalApi.slots"
         :events="modalApi.events"

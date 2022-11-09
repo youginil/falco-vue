@@ -1,6 +1,6 @@
 <template>
     <comp-def
-        title="BugInput"
+        title="FaInput"
         :props="inputApi.props"
         :slots="inputApi.slots"
         :events="inputApi.events"

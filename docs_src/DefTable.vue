@@ -1,7 +1,7 @@
 <template>
     <div>
         <comp-def
-            title="BugTable"
+            title="FaTable"
             :props="tableApi.props"
             :slots="tableApi.slots"
             :events="tableApi.events"
@@ -12,7 +12,7 @@
             </template>
         </comp-def>
         <comp-def
-            title="BugTableColumn"
+            title="FaTableColumn"
             :props="tableColumnApi.props"
             :slots="tableColumnApi.slots"
             :events="tableColumnApi.events"

@@ -19,50 +19,50 @@
         </div>
         <div class="props" v-if="props.length > 0">
             <h4 class="subtitle">Props</h4>
-            <bug-table :list="props">
-                <bug-table-column prop="name"></bug-table-column>
-                <bug-table-column prop="type"></bug-table-column>
-                <bug-table-column label="Required">
+            <fa-table :list="props">
+                <fa-table-column prop="name"></fa-table-column>
+                <fa-table-column prop="type"></fa-table-column>
+                <fa-table-column label="Required">
                     <template #default="item">
                         {{ item.required ? 'Y' : 'N' }}
                     </template>
-                </bug-table-column>
-                <bug-table-column prop="default"></bug-table-column>
-                <bug-table-column label="Description">
+                </fa-table-column>
+                <fa-table-column prop="default"></fa-table-column>
+                <fa-table-column label="Description">
                     <template #default="item">
                         <p style="white-space: pre-wrap">{{ item.desc }}</p>
                     </template>
-                </bug-table-column>
-            </bug-table>
+                </fa-table-column>
+            </fa-table>
         </div>
         <div class="slots" v-if="slots.length > 0">
             <h4 class="subtitle">Slots</h4>
-            <bug-table :list="slots">
-                <bug-table-column prop="name"></bug-table-column>
-                <bug-table-column
+            <fa-table :list="slots">
+                <fa-table-column prop="name"></fa-table-column>
+                <fa-table-column
                     prop="desc"
                     label="Description"
-                ></bug-table-column>
-            </bug-table>
+                ></fa-table-column>
+            </fa-table>
         </div>
         <div class="events" v-if="events.length > 0">
             <h4 class="subtitle">Events</h4>
-            <bug-table :list="events">
-                <bug-table-column prop="name"></bug-table-column>
-                <bug-table-column prop="params"></bug-table-column>
-                <bug-table-column
+            <fa-table :list="events">
+                <fa-table-column prop="name"></fa-table-column>
+                <fa-table-column prop="params"></fa-table-column>
+                <fa-table-column
                     prop="desc"
                     label="Description"
-                ></bug-table-column>
-            </bug-table>
+                ></fa-table-column>
+            </fa-table>
         </div>
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType, ref } from 'vue';
-import BugTable from '../src/components/BugTable.vue';
-import BugTableColumn from '../src/components/BugTableColumn.vue';
+import FaTable from '../src/components/FaTable.vue';
+import FaTableColumn from '../src/components/FaTableColumn.vue';
 
 export type PropList = {
     name: string;
@@ -88,7 +88,7 @@ export type CompAPI = {
 
 export default defineComponent({
     name: 'CompDef',
-    components: { BugTable, BugTableColumn },
+    components: { FaTable, FaTableColumn },
     props: {
         title: String,
         props: {

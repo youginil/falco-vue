@@ -1,12 +1,12 @@
 import { App, createApp } from 'vue';
-import BugConfirm from './BugConfirm.vue';
+import FaConfirm from './FaConfirm.vue';
 
 let root: App;
 
 function init() {
     const container = document.createElement('div');
     document.body.appendChild(container);
-    root = createApp(BugConfirm);
+    root = createApp(FaConfirm);
     root.mount(container);
 }
 
@@ -20,7 +20,7 @@ if (document.body) {
 
 function Confirm(title: string): Promise<void> {
     // @ts-ignore
-    const data = window.__bugconfirm.data;
+    const data = window.__confirm.data;
     data.show = true;
     data.title = title;
     return new Promise((resolve) => {

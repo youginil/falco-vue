@@ -1,6 +1,6 @@
 <template>
     <comp-def
-        title="BugButton"
+        title="FaButton"
         :props="buttonApi.props"
         :slots="buttonApi.slots"
         :events="buttonApi.events"

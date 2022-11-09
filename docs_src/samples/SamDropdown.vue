@@ -1,13 +1,13 @@
 <template>
     <div>
-        <bug-dropdown>
+        <fa-dropdown>
             <template #default>This is dropdown</template>
             <template #dropdown>
-                <bug-dropdown-item>Apple</bug-dropdown-item>
-                <bug-dropdown-item>Banana</bug-dropdown-item>
-                <bug-dropdown-item>Orange</bug-dropdown-item>
+                <fa-dropdown-item>Apple</fa-dropdown-item>
+                <fa-dropdown-item>Banana</fa-dropdown-item>
+                <fa-dropdown-item>Orange</fa-dropdown-item>
             </template>
-        </bug-dropdown>
+        </fa-dropdown>
     </div>
 </template>
 

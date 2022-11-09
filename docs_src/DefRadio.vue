@@ -1,7 +1,7 @@
 <template>
     <div>
         <comp-def
-            title="BugRadio"
+            title="FaRadio"
             :props="radioApi.props"
             :slots="radioApi.slots"
             :events="radioApi.events"
@@ -12,7 +12,7 @@
             </template>
         </comp-def>
         <comp-def
-            title="BugRadioGroup"
+            title="FaRadioGroup"
             :props="radioGroupApi.props"
             :slots="radioGroupApi.slots"
             :events="radioGroupApi.events"

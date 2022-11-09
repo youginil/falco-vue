@@ -1,9 +1,9 @@
 <template>
     <div>
-        <bug-radio-group
+        <fa-radio-group
             :options="radioGroupOptions"
             v-model="radioGroupValue"
-        ></bug-radio-group>
+        ></fa-radio-group>
     </div>
 </template>
 

@@ -1,11 +1,11 @@
 <template>
     <div>
-        <bug-form-item label="Username">
-            <bug-input width="100%"></bug-input>
-        </bug-form-item>
-        <bug-form-item label="Password" layout="h">
-            <bug-input type="password" width="100%"></bug-input>
-        </bug-form-item>
+        <fa-form-item label="Username">
+            <fa-input width="100%"></fa-input>
+        </fa-form-item>
+        <fa-form-item label="Password" layout="h">
+            <fa-input type="password" width="100%"></fa-input>
+        </fa-form-item>
     </div>
 </template>
 

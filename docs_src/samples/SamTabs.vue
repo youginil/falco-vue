@@ -1,10 +1,10 @@
 <template>
     <div>
-        <bug-tabs v-model="tab">
-            <bug-tab-pane key="1">Apple</bug-tab-pane>
-            <bug-tab-pane key="2">Orange</bug-tab-pane>
-            <bug-tab-pane key="3">Banana</bug-tab-pane>
-        </bug-tabs>
+        <fa-tabs v-model="tab">
+            <fa-tab-pane key="1">Apple</fa-tab-pane>
+            <fa-tab-pane key="2">Orange</fa-tab-pane>
+            <fa-tab-pane key="3">Banana</fa-tab-pane>
+        </fa-tabs>
     </div>
 </template>
 

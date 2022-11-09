@@ -1,6 +1,6 @@
 <template>
     <comp-def
-        title="BugMenu"
+        title="FaMenu"
         :props="api.props"
         :slots="api.slots"
         :events="api.events"
@@ -11,13 +11,13 @@
         </template>
     </comp-def>
     <comp-def
-        title="BugMenuGroup"
+        title="FaMenuGroup"
         :props="groupApi.props"
         :slots="groupApi.slots"
         :events="groupApi.events"
     ></comp-def>
     <comp-def
-        title="BugMenuItem"
+        title="FaMenuItem"
         :props="itemApi.props"
         :slots="itemApi.slots"
         :events="itemApi.events"

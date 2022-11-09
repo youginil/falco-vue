@@ -1,6 +1,6 @@
 <template>
     <comp-def
-        title="BugDate"
+        title="FaDate"
         :props="dateApi.props"
         :slots="dateApi.slots"
         :events="dateApi.events"

@@ -1,7 +1,7 @@
 <template>
     <div>
-        <bug-radio class="mr10" label="Hello radio"></bug-radio>
-        <bug-radio label="Disabled" :disabled="true"></bug-radio>
+        <fa-radio class="mr10" label="Hello radio"></fa-radio>
+        <fa-radio label="Disabled" :disabled="true"></fa-radio>
     </div>
 </template>
 

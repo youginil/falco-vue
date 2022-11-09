@@ -1,6 +1,6 @@
 <template>
     <div>
-        <bug-backtop></bug-backtop>
+        <fa-backtop></fa-backtop>
     </div>
 </template>
 

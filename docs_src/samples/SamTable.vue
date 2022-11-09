@@ -1,10 +1,10 @@
 <template>
     <div>
-        <bug-table :list="tableList" :sort="tableSort">
-            <bug-table-column prop="id"></bug-table-column>
-            <bug-table-column prop="name"></bug-table-column>
-            <bug-table-column prop="age"></bug-table-column>
-        </bug-table>
+        <fa-table :list="tableList" :sort="tableSort">
+            <fa-table-column prop="id"></fa-table-column>
+            <fa-table-column prop="name"></fa-table-column>
+            <fa-table-column prop="age"></fa-table-column>
+        </fa-table>
     </div>
 </template>
 

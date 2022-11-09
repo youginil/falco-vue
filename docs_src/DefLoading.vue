@@ -1,6 +1,6 @@
 <template>
     <comp-def
-        title="BugLoading"
+        title="FaLoading"
         :props="loadingApi.props"
         :slots="loadingApi.slots"
         :events="loadingApi.events"

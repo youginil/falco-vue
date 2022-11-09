@@ -1,0 +1,96 @@
+.falco-pagination {
+  display: inline-block;
+  white-space: nowrap;
+  .falco-pagination-total {
+    display: inline-block;
+    line-height: 20px;
+    padding: 5px 10px;
+  }
+  .falco-pagination-prev,
+  .falco-pagination-next,
+  .falco-pagination-page {
+    display: inline-block;
+    line-height: 20px;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    transition: border-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    cursor: pointer;
+  }
+  .falco-pagination-prev,
+  .falco-pagination-next {
+    color: #0366d6;
+  }
+  .falco-pagination-prev::before,
+  .falco-pagination-next::after {
+    display: inline-block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    margin: 2px 0;
+    background-color: currentColor;
+  }
+  .falco-pagination-prev::before {
+    clip-path: polygon(
+      9.8px 12.8px,
+      8.7px 12.8px,
+      4.5px 8.5px,
+      4.5px 7.5px,
+      8.7px 3.2px,
+      9.8px 4.3px,
+      6.1px 8px,
+      9.8px 11.7px,
+      9.8px 12.8px
+    );
+  }
+  .falco-pagination-next::after {
+    clip-path: polygon(
+      6.2px 3.2px,
+      7.3px 3.2px,
+      11.5px 7.5px,
+      11.5px 8.5px,
+      7.3px 12.8px,
+      6.2px 11.7px,
+      9.9px 8px,
+      6.2px 4.3px,
+      6.2px 3.2px
+    );
+  }
+  .falco-pagination-page {
+    &.current-page {
+      background-color: #0366d6;
+      color: #fff;
+    }
+  }
+  .falco-pagination-prev:hover,
+  .falco-pagination-next:hover,
+  .falco-pagination-page:not(.current-page):hover {
+    border-color: #e1e4e8;
+  }
+  .falco-pagination-gap {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+    cursor: default;
+  }
+
+  .falco-page-info {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+    display: none;
+  }
+
+  @media screen and (max-width: 500px) {
+    .falco-pagination-total,
+    .falco-pagination-page,
+    .falco-pagination-gap {
+      display: none;
+    }
+    .falco-page-info {
+      display: inline-block;
+    }
+  }
+}

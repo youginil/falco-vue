@@ -1,6 +1,6 @@
 <template>
     <comp-def
-        title="BugTextarea"
+        title="FaTextarea"
         :props="textareaApi.props"
         :slots="textareaApi.slots"
         :events="textareaApi.events"

@@ -1,12 +1,12 @@
 <template>
     <div>
-        <bug-checkbox class="mr10" label="Agree or disagree"></bug-checkbox>
-        <bug-checkbox
+        <fa-checkbox class="mr10" label="Agree or disagree"></fa-checkbox>
+        <fa-checkbox
             class="mr10"
             label="Disabled"
             :disabled="true"
-        ></bug-checkbox>
-        <bug-checkbox label="Partial selection" :partial="true"></bug-checkbox>
+        ></fa-checkbox>
+        <fa-checkbox label="Partial selection" :partial="true"></fa-checkbox>
     </div>
 </template>
 

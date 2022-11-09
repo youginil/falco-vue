@@ -1,6 +1,6 @@
 <template>
     <div>
-        <bug-pagination :page="2" :pages="10"></bug-pagination>
+        <fa-pagination :page="2" :pages="10"></fa-pagination>
     </div>
 </template>
 

@@ -1,0 +1,12 @@
+.falco-tabs {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: inline-block;
+
+  &.vertical {
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-bottom: none;
+  }
+}

@@ -1,6 +1,6 @@
 <template>
     <comp-def
-        title="BugSkeleton"
+        title="FaSkeleton"
         :props="skeletonApi.props"
         :slots="skeletonApi.slots"
         :events="skeletonApi.events"

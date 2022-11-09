@@ -1,9 +1,9 @@
 <template>
     <div>
-        <bug-checkbox-group
+        <fa-checkbox-group
             :options="options"
             v-model="value"
-        ></bug-checkbox-group>
+        ></fa-checkbox-group>
     </div>
 </template>
 

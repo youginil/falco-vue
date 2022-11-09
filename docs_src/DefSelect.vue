@@ -1,6 +1,6 @@
 <template>
     <comp-def
-        title="BugSelect"
+        title="FaSelect"
         :props="selectApi.props"
         :slots="selectApi.slots"
         :events="selectApi.events"

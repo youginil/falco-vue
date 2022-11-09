@@ -1,3 +1,6 @@
+## v2.2.0
+- change project name from `bug` to `falco`
+
 ## v2.1.1
 ### Bugfix
 - add declaration of `message` and `confirm`

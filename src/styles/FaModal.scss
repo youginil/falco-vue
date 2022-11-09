@@ -1,0 +1,103 @@
+.falco-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  overflow: auto;
+  z-index: 999;
+}
+.falco-modal-box {
+  @media screen and (min-width: 600px) {
+    width: 500px;
+  }
+  @media screen and (max-width: 600px) {
+    width: 80%;
+  }
+  margin: 100px auto 50px;
+  border: 1px solid #ebeef5;
+  border-radius: 6px;
+  background-color: #fff;
+  overflow: hidden;
+  text-align: left;
+}
+.falco-modal-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #f5f5f5;
+  .falco-modal-title {
+    flex-grow: 1;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .falco-modal-close {
+    flex-shrink: 0;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: background-color 0.3s linear;
+    cursor: pointer;
+    position: relative;
+    &::before,
+    &::after {
+      display: inline-block;
+      content: '';
+      width: 14px;
+      height: 2px;
+      background-color: #999;
+      position: absolute;
+      left: math.div(30px - 14px, 2);
+      top: math.div(30px - 2px, 2);
+    }
+    &::before {
+      transform: rotate(-45deg);
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
+    &:hover {
+      background-color: #ddd;
+      &::before,
+      &::after {
+        background-color: #000;
+      }
+    }
+  }
+}
+.falco-modal-content {
+  padding: 15px;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-to,
+.fade-leave {
+  opacity: 1;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.move-enter-from,
+.move-leave-to {
+  transform: translateY(-50px);
+  opacity: 0;
+}
+.move-enter-to,
+.move-leave {
+  transform: translateY(0);
+  opacity: 1;
+}
+.move-enter-active,
+.move-leave-active {
+  transition: all 0.3s ease;
+}

@@ -1,5 +1,5 @@
-import bug, { message, confirm } from './src';
+import falco, { message, confirm } from './src';
 
-export default bug;
+export default falco;
 
 export { message, confirm };

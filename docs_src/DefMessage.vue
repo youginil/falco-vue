@@ -1,6 +1,6 @@
 <template>
     <comp-def
-        title="BugMessage"
+        title="FaMessage"
         :props="msgApi.props"
         :slots="msgApi.slots"
         :events="msgApi.events"

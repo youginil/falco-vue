@@ -1,6 +1,6 @@
 <template>
     <div>
-        <bug-select :options="selectOptions" v-model="selectValue"></bug-select>
+        <fa-select :options="selectOptions" v-model="selectValue"></fa-select>
     </div>
 </template>
 

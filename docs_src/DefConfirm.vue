@@ -1,6 +1,6 @@
 <template>
     <comp-def
-        title="BugConfirm"
+        title="FaConfirm"
         :props="confirmApi.props"
         :slots="confirmApi.slots"
         :events="confirmApi.events"

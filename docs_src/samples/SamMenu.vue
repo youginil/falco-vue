@@ -1,20 +1,20 @@
 <template>
     <div>
-        <bug-menu @change="onChange" :index="index">
-            <bug-menu-group title="Dashboard">
-                <bug-menu-item index="1-1">Home</bug-menu-item>
-                <bug-menu-item index="1-2">User</bug-menu-item>
-            </bug-menu-group>
-            <bug-menu-group title="User">
-                <bug-menu-item index="2-1">List</bug-menu-item>
-                <bug-menu-item index="2-2">Add</bug-menu-item>
-                <bug-menu-group title="Order">
-                    <bug-menu-item index="3-1">List</bug-menu-item>
-                    <bug-menu-item index="3-2">Add</bug-menu-item>
-                </bug-menu-group>
-                <bug-menu-item index="2-3">Delete</bug-menu-item>
-            </bug-menu-group>
-        </bug-menu>
+        <fa-menu @change="onChange" :index="index">
+            <fa-menu-group title="Dashboard">
+                <fa-menu-item index="1-1">Home</fa-menu-item>
+                <fa-menu-item index="1-2">User</fa-menu-item>
+            </fa-menu-group>
+            <fa-menu-group title="User">
+                <fa-menu-item index="2-1">List</fa-menu-item>
+                <fa-menu-item index="2-2">Add</fa-menu-item>
+                <fa-menu-group title="Order">
+                    <fa-menu-item index="3-1">List</fa-menu-item>
+                    <fa-menu-item index="3-2">Add</fa-menu-item>
+                </fa-menu-group>
+                <fa-menu-item index="2-3">Delete</fa-menu-item>
+            </fa-menu-group>
+        </fa-menu>
     </div>
 </template>
 

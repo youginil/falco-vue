@@ -1,6 +1,6 @@
 <template>
     <comp-def
-        title="BugPopover"
+        title="FaPopover"
         :props="popApi.props"
         :slots="popApi.slots"
         :events="popApi.events"

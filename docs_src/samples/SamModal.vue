@@ -1,8 +1,8 @@
 <template>
     <div>
-        <bug-button @click="modalIsShow = true">Show Modal</bug-button>
-        <bug-modal title="This is modal title" v-model:show="modalIsShow"
-            >This is modal content</bug-modal
+        <fa-button @click="modalIsShow = true">Show Modal</fa-button>
+        <fa-modal title="This is modal title" v-model:show="modalIsShow"
+            >This is modal content</fa-modal
         >
     </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <bug-textarea></bug-textarea>
+        <fa-textarea></fa-textarea>
     </div>
 </template>
 

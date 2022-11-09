@@ -1,7 +1,7 @@
 <template>
     <div>
         <comp-def
-            title="BugCheckbox"
+            title="FaCheckbox"
             :props="checkboxApi.props"
             :slots="checkboxApi.slots"
             :events="checkboxApi.events"
@@ -12,7 +12,7 @@
             </template>
         </comp-def>
         <comp-def
-            title="BugCheckboxGroup"
+            title="FaCheckboxGroup"
             :props="checkboxGroupApi.props"
             :slots="checkboxGroupApi.slots"
             :events="checkboxGroupApi.events"

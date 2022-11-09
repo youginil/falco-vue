@@ -1,6 +1,6 @@
 <template>
     <div>
-        <bug-loading tip="Loading..."></bug-loading>
+        <fa-loading tip="Loading..."></fa-loading>
     </div>
 </template>
 

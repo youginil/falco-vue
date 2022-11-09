@@ -6,11 +6,11 @@ A simple efficient web UI library base on Vue 3.
 
 ## Usage
 ```
-import bug, {message} from 'falco-vue';
+import falco, {message} from 'falco-vue';
 import './node_modules/falco-vue/dist/style.css';
 import App from './App.vue';
 
-createApp(App).use(bug).mount('#app');
+createApp(App).use(falco).mount('#app');
 
 message.info('Hello World!!!');
 ```

@@ -38,7 +38,7 @@ const messages: MessageItem[] = [];
 
 function showMessage(option: MessageOption) {
     const elem = document.createElement('div');
-    elem.className = 'bug-message';
+    elem.className = 'fa-message';
     let typeClass = 'info';
     switch (option.type) {
         case MessageType.INFO:
@@ -62,11 +62,11 @@ function showMessage(option: MessageOption) {
     container.appendChild(elem);
 
     const flag = document.createElement('span');
-    flag.className = 'bug-message-flag';
+    flag.className = 'fa-message-flag';
     elem.appendChild(flag);
 
     const content = document.createElement('p');
-    content.className = 'bug-message-content';
+    content.className = 'fa-message-content';
     elem.appendChild(content);
     if (option.html) {
         content.innerHTML = option.text;
@@ -74,7 +74,7 @@ function showMessage(option: MessageOption) {
         content.innerText = option.text;
     }
 
-    const id = `bug-msg-${Math.random()}`;
+    const id = `fa-msg-${Math.random()}`;
     const item: MessageItem = {
         id,
         option,
@@ -85,14 +85,14 @@ function showMessage(option: MessageOption) {
 
     const onShown = () => {
         elem.removeEventListener('transitionend', onShown);
-        elem.classList.remove('bug-message-enter-active');
-        elem.classList.remove('bug-message-enter-from');
-        elem.classList.remove('bug-message-enter-to');
-        elem.classList.add('bug-message-leave-from');
+        elem.classList.remove('fa-message-enter-active');
+        elem.classList.remove('fa-message-enter-from');
+        elem.classList.remove('fa-message-enter-to');
+        elem.classList.add('fa-message-leave-from');
         setTimeout(() => {
-            elem.classList.remove('bug-message-leave-from');
-            elem.classList.add('bug-message-leave-active');
-            elem.classList.add('bug-message-leave-to');
+            elem.classList.remove('fa-message-leave-from');
+            elem.classList.add('fa-message-leave-active');
+            elem.classList.add('fa-message-leave-to');
             elem.addEventListener('transitionend', () => {
                 elem.remove();
                 const i = messages.findIndex((item) => item.id === id);
@@ -100,10 +100,10 @@ function showMessage(option: MessageOption) {
             });
         }, 2000);
     };
-    elem.classList.add('bug-message-enter-from');
+    elem.classList.add('fa-message-enter-from');
     requestAnimationFrame(() => {
-        elem.classList.add('bug-message-enter-active');
-        elem.classList.add('bug-message-enter-to');
+        elem.classList.add('fa-message-enter-active');
+        elem.classList.add('fa-message-enter-to');
     });
     elem.addEventListener('transitionend', onShown);
 }
@@ -140,11 +140,11 @@ function success(text: string, html = false) {
     });
 }
 
-const BugMessage = {
+const FaMessage = {
     info,
     warn,
     error,
     success,
 };
 
-export default BugMessage;
+export default FaMessage;

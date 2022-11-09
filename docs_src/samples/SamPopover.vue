@@ -1,17 +1,17 @@
 <template>
     <div>
-        <bug-popover>
+        <fa-popover>
             <template #default>
-                <bug-button class="mr10">Hover</bug-button>
+                <fa-button class="mr10">Hover</fa-button>
             </template>
             <template #pop> Content </template>
-        </bug-popover>
-        <bug-popover trigger="click">
+        </fa-popover>
+        <fa-popover trigger="click">
             <template #default>
-                <bug-button>Click</bug-button>
+                <fa-button>Click</fa-button>
             </template>
             <template #pop> Content </template>
-        </bug-popover>
+        </fa-popover>
     </div>
 </template>
 

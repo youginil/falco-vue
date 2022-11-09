@@ -1,6 +1,6 @@
 <template>
     <comp-def
-        title="BugPagination"
+        title="FaPagination"
         :props="pgApi.props"
         :slots="pgApi.slots"
         :events="pgApi.events"

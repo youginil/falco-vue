@@ -1,7 +1,7 @@
 <template>
     <div>
-        <bug-skeleton></bug-skeleton>
-        <bug-skeleton class="mt20" layout="table"></bug-skeleton>
+        <fa-skeleton></fa-skeleton>
+        <fa-skeleton class="mt20" layout="table"></fa-skeleton>
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <bug-button @click="cfm">Confirm</bug-button>
+        <fa-button @click="cfm">Confirm</fa-button>
     </div>
 </template>
 

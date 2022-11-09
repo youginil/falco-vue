@@ -1,6 +1,6 @@
 <template>
     <comp-def
-        title="BugDropdown"
+        title="FaDropdown"
         :props="dropdownApi.props"
         :slots="dropdownApi.slots"
         :events="dropdownApi.events"

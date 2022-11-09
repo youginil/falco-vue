@@ -1,59 +1,59 @@
 import { App } from 'vue';
-import BugBacktop from './components/BugBacktop.vue';
-import BugButton from './components/BugButton.vue';
-import BugCheckbox from './components/BugCheckbox.vue';
-import BugCheckboxGroup from './components/BugCheckboxGroup.vue';
-import BugDate from './components/BugDate.vue';
-import BugDropdown from './components/BugDropdown.vue';
-import BugDropdownItem from './components/BugDropdownItem.vue';
-import BugInput from './components/BugInput.vue';
-import BugLoading from './components/BugLoading.vue';
-import BugMenu from './components/BugMenu.vue';
-import BugMenuGroup from './components/BugMenuGroup.vue';
-import BugMenuItem from './components/BugMenuItem.vue';
-import BugModal from './components/BugModal.vue';
-import BugPagination from './components/BugPagination.vue';
-import BugPopover from './components/BugPopover.vue';
-import BugRadio from './components/BugRadio.vue';
-import BugRadioGroup from './components/BugRadioGroup.vue';
-import BugSelect from './components/BugSelect.vue';
-import BugSkeleton from './components/BugSkeleton.vue';
-import BugTable from './components/BugTable.vue';
-import BugTableColumn from './components/BugTableColumn.vue';
-import BugTabPane from './components/BugTabPane.vue';
-import BugTabs from './components/BugTabs.vue';
-import BugTextarea from './components/BugTextarea.vue';
-import BugFormItem from './components/BugFormItem.vue';
+import FaBacktop from './components/FaBacktop.vue';
+import FaButton from './components/FaButton.vue';
+import FaCheckbox from './components/FaCheckbox.vue';
+import FaCheckboxGroup from './components/FaCheckboxGroup.vue';
+import FaDate from './components/FaDate.vue';
+import FaDropdown from './components/FaDropdown.vue';
+import FaDropdownItem from './components/FaDropdownItem.vue';
+import FaInput from './components/FaInput.vue';
+import FaLoading from './components/FaLoading.vue';
+import FaMenu from './components/FaMenu.vue';
+import FaMenuGroup from './components/FaMenuGroup.vue';
+import FaMenuItem from './components/FaMenuItem.vue';
+import FaModal from './components/FaModal.vue';
+import FaPagination from './components/FaPagination.vue';
+import FaPopover from './components/FaPopover.vue';
+import FaRadio from './components/FaRadio.vue';
+import FaRadioGroup from './components/FaRadioGroup.vue';
+import FaSelect from './components/FaSelect.vue';
+import FaSkeleton from './components/FaSkeleton.vue';
+import FaTable from './components/FaTable.vue';
+import FaTableColumn from './components/FaTableColumn.vue';
+import FaTabPane from './components/FaTabPane.vue';
+import FaTabs from './components/FaTabs.vue';
+import FaTextarea from './components/FaTextarea.vue';
+import FaFormItem from './components/FaFormItem.vue';
 
 import message from './global/message';
 import confirm from './global/confirm';
 
 const components = [
-    BugBacktop,
-    BugButton,
-    BugCheckbox,
-    BugCheckboxGroup,
-    BugDate,
-    BugDropdown,
-    BugDropdownItem,
-    BugInput,
-    BugLoading,
-    BugMenu,
-    BugMenuGroup,
-    BugMenuItem,
-    BugModal,
-    BugPagination,
-    BugPopover,
-    BugRadio,
-    BugRadioGroup,
-    BugSelect,
-    BugSkeleton,
-    BugTable,
-    BugTableColumn,
-    BugTabPane,
-    BugTabs,
-    BugTextarea,
-    BugFormItem,
+    FaBacktop,
+    FaButton,
+    FaCheckbox,
+    FaCheckboxGroup,
+    FaDate,
+    FaDropdown,
+    FaDropdownItem,
+    FaInput,
+    FaLoading,
+    FaMenu,
+    FaMenuGroup,
+    FaMenuItem,
+    FaModal,
+    FaPagination,
+    FaPopover,
+    FaRadio,
+    FaRadioGroup,
+    FaSelect,
+    FaSkeleton,
+    FaTable,
+    FaTableColumn,
+    FaTabPane,
+    FaTabs,
+    FaTextarea,
+    FaFormItem,
 ];
 
 export default {

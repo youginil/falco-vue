@@ -1,6 +1,6 @@
 <template>
     <comp-def
-        title="BugFromItem"
+        title="FaFromItem"
         :props="formItemApi.props"
         :slots="formItemApi.slots"
         :events="formItemApi.events"

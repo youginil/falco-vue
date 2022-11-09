@@ -1,6 +1,6 @@
 {
     "name": "falco-vue",
-    "version": "2.1.1",
+    "version": "2.2.0",
     "keywords": [
         "web",
         "component",
@@ -28,7 +28,7 @@
         "type": "git",
         "url": "git+https://github.com/youginil/falco-vue.git"
     },
-    "author": "Bug Emperor",
+    "author": "Yougi Nil",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/youginil/falco-vue/issues"

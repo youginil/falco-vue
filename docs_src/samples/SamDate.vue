@@ -1,6 +1,6 @@
 <template>
     <div>
-        <bug-date v-model="dateValue"></bug-date>
+        <fa-date v-model="dateValue"></fa-date>
     </div>
 </template>
 

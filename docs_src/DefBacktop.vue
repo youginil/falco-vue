@@ -1,6 +1,6 @@
 <template>
     <comp-def
-        title="BugBacktop"
+        title="FaBacktop"
         :props="backtopApi.props"
         :slots="backtopApi.slots"
         :events="backtopApi.events"
