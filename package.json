@@ -1,5 +1,5 @@
 {
-    "name": "bug4vue",
+    "name": "falco-vue",
     "version": "2.1.1",
     "keywords": [
         "web",
@@ -7,12 +7,12 @@
         "vue"
     ],
     "description": "",
-    "main": "./dist/bug4vue.js",
-    "module": "./dist/bug4vue.js",
+    "main": "./dist/falco-vue.js",
+    "module": "./dist/falco-vue.js",
     "exports": {
         ".": {
-            "import": "./dist/bug4vue.es.js",
-            "require": "./dist/bug4vue.umd.js"
+            "import": "./dist/falco-vue.es.js",
+            "require": "./dist/falco-vue.umd.js"
         }
     },
     "files": [
@@ -26,14 +26,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/youginil/bug4vue.git"
+        "url": "git+https://github.com/youginil/falco-vue.git"
     },
     "author": "Bug Emperor",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/youginil/bug4vue/issues"
+        "url": "https://github.com/youginil/falco-vue/issues"
     },
-    "homepage": "https://github.com/youginil/bug4vue#readme",
+    "homepage": "https://github.com/youginil/falco-vue#readme",
     "dependencies": {
         "vue": "3.2.41"
     },
