@@ -1,5 +1,5 @@
 {
-    "name": "bug-vue",
+    "name": "bug4vue",
     "version": "2.1.1",
     "keywords": [
         "web",
@@ -7,12 +7,12 @@
         "vue"
     ],
     "description": "",
-    "main": "./dist/bug-vue.js",
-    "module": "./dist/bug-vue.js",
+    "main": "./dist/bug4vue.js",
+    "module": "./dist/bug4vue.js",
     "exports": {
         ".": {
-            "import": "./dist/bug-vue.es.js",
-            "require": "./dist/bug-vue.umd.js"
+            "import": "./dist/bug4vue.es.js",
+            "require": "./dist/bug4vue.umd.js"
         }
     },
     "files": [
@@ -26,14 +26,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/youginil/bug-vue.git"
+        "url": "git+https://github.com/youginil/bug4vue.git"
     },
     "author": "Bug Emperor",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/youginil/bug-vue/issues"
+        "url": "https://github.com/youginil/bug4vue/issues"
     },
-    "homepage": "https://github.com/youginil/bug-vue#readme",
+    "homepage": "https://github.com/youginil/bug4vue#readme",
     "dependencies": {
         "vue": "3.2.41"
     },

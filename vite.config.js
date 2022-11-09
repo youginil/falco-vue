@@ -29,7 +29,7 @@ export default ({ command, mode }) => {
             build: {
                 lib: {
                     entry: path.resolve(__dirname, 'src/index.ts'),
-                    name: 'bug-vue',
+                    name: 'bug4vue',
                 },
                 rollupOptions: {
                     external: ['vue'],
