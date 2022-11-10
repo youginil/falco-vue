@@ -6,163 +6,163 @@ $large-triangle-offset: -$large-triangle-width;
 $small-triangle-offset: -$small-triangle-width;
 
 .falco-popover {
-  display: inline-block;
-  position: relative;
+    display: inline-block;
+    position: relative;
 }
 .falco-popover-pop {
-  display: inline-block;
-  padding: 10px;
-  width: 200px;
-  background-color: #fff;
-  border: 1px solid $border-color;
-  border-radius: 6px;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-  position: absolute;
-  &.black {
-    background-color: #000;
-    border-color: #000;
-  }
-  &::before {
     display: inline-block;
-    content: '';
-    border: math.div($large-triangle-width, 2) solid transparent;
+    padding: 10px;
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
     position: absolute;
-  }
-  &::after {
-    display: inline-block;
-    content: '';
-    border: math.div($small-triangle-width, 2) solid transparent;
-    position: absolute;
-  }
-  &.pos-top {
-    bottom: 100%;
-    margin-bottom: $gap;
+    &.black {
+        background-color: #000;
+        border-color: #000;
+    }
     &::before {
-      border-top-color: $border-color;
-      bottom: $large-triangle-offset;
+        display: inline-block;
+        content: '';
+        border: math.div($large-triangle-width, 2) solid transparent;
+        position: absolute;
     }
     &::after {
-      border-top-color: #fff;
-      bottom: $small-triangle-offset;
+        display: inline-block;
+        content: '';
+        border: math.div($small-triangle-width, 2) solid transparent;
+        position: absolute;
     }
-    &.black::before,
-    &.black::after {
-      border-top-color: #000;
+    &.pos-top {
+        bottom: 100%;
+        margin-bottom: $gap;
+        &::before {
+            border-top-color: $border-color;
+            bottom: $large-triangle-offset;
+        }
+        &::after {
+            border-top-color: #fff;
+            bottom: $small-triangle-offset;
+        }
+        &.black::before,
+        &.black::after {
+            border-top-color: #000;
+        }
     }
-  }
-  &.pos-bottom {
-    top: 100%;
-    margin-top: $gap;
-    &::before {
-      border-bottom-color: $border-color;
-      top: $large-triangle-offset;
+    &.pos-bottom {
+        top: 100%;
+        margin-top: $gap;
+        &::before {
+            border-bottom-color: $border-color;
+            top: $large-triangle-offset;
+        }
+        &::after {
+            border-bottom-color: #fff;
+            top: $small-triangle-offset;
+        }
+        &.black::before,
+        &.black::after {
+            border-bottom-color: #000;
+        }
     }
-    &::after {
-      border-bottom-color: #fff;
-      top: $small-triangle-offset;
+    &.pos-left {
+        right: 100%;
+        margin-right: $gap;
+        &::before {
+            border-left-color: $border-color;
+            right: $large-triangle-offset;
+        }
+        &::after {
+            border-left-color: #fff;
+            right: $small-triangle-offset;
+        }
+        &.black::before,
+        &.black::after {
+            border-left-color: #000;
+        }
     }
-    &.black::before,
-    &.black::after {
-      border-bottom-color: #000;
+    &.pos-right {
+        left: 100%;
+        margin-left: $gap;
+        &::before {
+            border-right-color: $border-color;
+            left: $large-triangle-offset;
+        }
+        &::after {
+            border-right-color: #fff;
+            left: $small-triangle-offset;
+        }
+        &.black::before,
+        &.black::after {
+            border-right-color: #000;
+        }
     }
-  }
-  &.pos-left {
-    right: 100%;
-    margin-right: $gap;
-    &::before {
-      border-left-color: $border-color;
-      right: $large-triangle-offset;
+    &.h-start {
+        left: 0;
+        &::before {
+            left: 10px;
+        }
+        &::after {
+            left: 11px;
+        }
     }
-    &::after {
-      border-left-color: #fff;
-      right: $small-triangle-offset;
+    &.h-middle {
+        left: 50%;
+        transform: translateX(-50%);
+        &::before,
+        &::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
-    &.black::before,
-    &.black::after {
-      border-left-color: #000;
+    &.h-end {
+        right: 0;
+        &::before {
+            right: 10px;
+        }
+        &::after {
+            right: 11px;
+        }
     }
-  }
-  &.pos-right {
-    left: 100%;
-    margin-left: $gap;
-    &::before {
-      border-right-color: $border-color;
-      left: $large-triangle-offset;
+    &.v-start {
+        top: 0;
+        &::before {
+            top: 10px;
+        }
+        &::after {
+            top: 11px;
+        }
     }
-    &::after {
-      border-right-color: #fff;
-      left: $small-triangle-offset;
+    &.v-middle {
+        top: 50%;
+        transform: translateY(-50%);
+        &::before,
+        &::after {
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
-    &.black::before,
-    &.black::after {
-      border-right-color: #000;
+    &.v-end {
+        bottom: 0;
+        &::before {
+            bottom: 10px;
+        }
+        &::after {
+            bottom: 11px;
+        }
     }
-  }
-  &.h-start {
-    left: 0;
-    &::before {
-      left: 10px;
-    }
-    &::after {
-      left: 11px;
-    }
-  }
-  &.h-middle {
-    left: 50%;
-    transform: translateX(-50%);
-    &::before,
-    &::after {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-  &.h-end {
-    right: 0;
-    &::before {
-      right: 10px;
-    }
-    &::after {
-      right: 11px;
-    }
-  }
-  &.v-start {
-    top: 0;
-    &::before {
-      top: 10px;
-    }
-    &::after {
-      top: 11px;
-    }
-  }
-  &.v-middle {
-    top: 50%;
-    transform: translateY(-50%);
-    &::before,
-    &::after {
-      top: 50%;
-      transform: translateY(-50%);
-    }
-  }
-  &.v-end {
-    bottom: 0;
-    &::before {
-      bottom: 10px;
-    }
-    &::after {
-      bottom: 11px;
-    }
-  }
 }
 
 .falco-popover-enter-from,
 .falco-popover-leave-to {
-  opacity: 0;
+    opacity: 0;
 }
 .falco-popover-enter-to,
 .falco-popover-leave-from {
-  opacity: 1;
+    opacity: 1;
 }
 .falco-popover-enter-active,
 .falco-popover-leave-active {
-  transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }

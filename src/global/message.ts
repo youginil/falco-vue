@@ -38,7 +38,7 @@ const messages: MessageItem[] = [];
 
 function showMessage(option: MessageOption) {
     const elem = document.createElement('div');
-    elem.className = 'fa-message';
+    elem.className = 'falco-message';
     let typeClass = 'info';
     switch (option.type) {
         case MessageType.INFO:
@@ -62,11 +62,11 @@ function showMessage(option: MessageOption) {
     container.appendChild(elem);
 
     const flag = document.createElement('span');
-    flag.className = 'fa-message-flag';
+    flag.className = 'falco-message-flag';
     elem.appendChild(flag);
 
     const content = document.createElement('p');
-    content.className = 'fa-message-content';
+    content.className = 'falco-message-content';
     elem.appendChild(content);
     if (option.html) {
         content.innerHTML = option.text;
@@ -74,7 +74,7 @@ function showMessage(option: MessageOption) {
         content.innerText = option.text;
     }
 
-    const id = `fa-msg-${Math.random()}`;
+    const id = `falco-msg-${Math.random()}`;
     const item: MessageItem = {
         id,
         option,
@@ -85,14 +85,14 @@ function showMessage(option: MessageOption) {
 
     const onShown = () => {
         elem.removeEventListener('transitionend', onShown);
-        elem.classList.remove('fa-message-enter-active');
-        elem.classList.remove('fa-message-enter-from');
-        elem.classList.remove('fa-message-enter-to');
-        elem.classList.add('fa-message-leave-from');
+        elem.classList.remove('falco-message-enter-active');
+        elem.classList.remove('falco-message-enter-from');
+        elem.classList.remove('falco-message-enter-to');
+        elem.classList.add('falco-message-leave-from');
         setTimeout(() => {
-            elem.classList.remove('fa-message-leave-from');
-            elem.classList.add('fa-message-leave-active');
-            elem.classList.add('fa-message-leave-to');
+            elem.classList.remove('falco-message-leave-from');
+            elem.classList.add('falco-message-leave-active');
+            elem.classList.add('falco-message-leave-to');
             elem.addEventListener('transitionend', () => {
                 elem.remove();
                 const i = messages.findIndex((item) => item.id === id);
@@ -100,10 +100,10 @@ function showMessage(option: MessageOption) {
             });
         }, 2000);
     };
-    elem.classList.add('fa-message-enter-from');
+    elem.classList.add('falco-message-enter-from');
     requestAnimationFrame(() => {
-        elem.classList.add('fa-message-enter-active');
-        elem.classList.add('fa-message-enter-to');
+        elem.classList.add('falco-message-enter-active');
+        elem.classList.add('falco-message-enter-to');
     });
     elem.addEventListener('transitionend', onShown);
 }

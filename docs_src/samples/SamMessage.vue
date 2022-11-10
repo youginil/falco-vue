@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import {message} from '../../src';
+import { message } from '../../src';
 
 export default defineComponent({
     setup() {

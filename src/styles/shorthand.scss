@@ -1,152 +1,152 @@
 .clear::after {
-  clear: both;
-  content: '';
-  display: block;
+    clear: both;
+    content: '';
+    display: block;
 }
 
 .pr {
-  position: relative;
+    position: relative;
 }
 
 .pa {
-  position: absolute;
+    position: absolute;
 }
 
 .pf {
-  position: fixed;
+    position: fixed;
 }
 
 .ib {
-  display: inline-block;
+    display: inline-block;
 }
 
 .fl {
-  float: left;
+    float: left;
 }
 
 .fr {
-  float: right;
+    float: right;
 }
 
 .tc {
-  text-align: center;
+    text-align: center;
 }
 
 .tr {
-  text-align: right;
+    text-align: right;
 }
 
 .tl {
-  text-align: left;
+    text-align: left;
 }
 
 .oh {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .oe {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .vt > * {
-  vertical-align: top;
+    vertical-align: top;
 }
 
 .vb > * {
-  vertical-align: bottom;
+    vertical-align: bottom;
 }
 
 @for $i from 12 through 30 {
-  .fs#{$i} {
-    font-size: #{$i}px;
-  }
+    .fs#{$i} {
+        font-size: #{$i}px;
+    }
 }
 
 @for $i from 1 through 9 {
-  .fw#{$i}00 {
-    font-weight: 100 * $i;
-  }
+    .fw#{$i}00 {
+        font-weight: 100 * $i;
+    }
 }
 
 @for $i from 1 through 20 {
-  .w#{$i * 5} {
-    width: 5px * $i;
-  }
-  .h#{$i * 5} {
-    height: 5px * $i;
-  }
-  .m#{$i * 5} {
-    margin: 5px * $i;
-  }
-  .mt#{$i * 5} {
-    margin-top: 5px * $i;
-  }
-  .mb#{$i * 5} {
-    margin-bottom: 5px * $i;
-  }
-  .ml#{$i * 5} {
-    margin-left: 5px * $i;
-  }
-  .mr#{$i * 5} {
-    margin-right: 5px * $i;
-  }
-  .p#{$i * 5} {
-    padding: 5px * $i;
-  }
-  .pt#{$i * 5} {
-    padding-top: 5px * $i;
-  }
-  .pb#{$i * 5} {
-    padding-bottom: 5px * $i;
-  }
-  .pl#{$i * 5} {
-    padding-left: 5px * $i;
-  }
-  .pr#{$i * 5} {
-    padding-right: 5px * $i;
-  }
+    .w#{$i * 5} {
+        width: 5px * $i;
+    }
+    .h#{$i * 5} {
+        height: 5px * $i;
+    }
+    .m#{$i * 5} {
+        margin: 5px * $i;
+    }
+    .mt#{$i * 5} {
+        margin-top: 5px * $i;
+    }
+    .mb#{$i * 5} {
+        margin-bottom: 5px * $i;
+    }
+    .ml#{$i * 5} {
+        margin-left: 5px * $i;
+    }
+    .mr#{$i * 5} {
+        margin-right: 5px * $i;
+    }
+    .p#{$i * 5} {
+        padding: 5px * $i;
+    }
+    .pt#{$i * 5} {
+        padding-top: 5px * $i;
+    }
+    .pb#{$i * 5} {
+        padding-bottom: 5px * $i;
+    }
+    .pl#{$i * 5} {
+        padding-left: 5px * $i;
+    }
+    .pr#{$i * 5} {
+        padding-right: 5px * $i;
+    }
 }
 
 .flex-c {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .flex-vc {
-  align-items: center;
-  display: flex;
+    align-items: center;
+    display: flex;
 }
 
 .flex-hc {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .flex-bw {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .iflex-c {
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
 }
 
 .iflex-vc {
-  align-items: center;
-  display: inline-flex;
+    align-items: center;
+    display: inline-flex;
 }
 
 .iflex-hc {
-  display: inline-flex;
-  justify-content: center;
+    display: inline-flex;
+    justify-content: center;
 }
 
 .iflex-bw {
-  display: inline-flex;
-  justify-content: space-between;
+    display: inline-flex;
+    justify-content: space-between;
 }

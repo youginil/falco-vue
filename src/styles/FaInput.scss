@@ -1,57 +1,57 @@
 .falco-input {
-  display: inline-block;
-  width: 150px;
-  position: relative;
-
-  input {
-    border: 1px solid #e1e4e8;
-    border-radius: 6px;
-    color: #24292e;
-    background-color: #fafbfc;
-    font-size: 14px;
-    line-height: 20px;
-    outline: none;
-    transition: all 0.3s linear;
-    padding: 5px 12px;
-    width: 100%;
-
-    &::placeholder {
-      color: #a3aab1;
-    }
-    &:not(:disabled):focus {
-      border-color: #0366d6;
-      box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
-      background-color: #ffffff;
-    }
-    &:disabled {
-      background-color: #f3f4f6;
-      color: #959da5;
-    }
-  }
-
-  $clear-size: 18px;
-  &:not(:disabled) > .clear {
     display: inline-block;
-    width: $clear-size;
-    height: $clear-size;
-    background-image: url(../images/x.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    opacity: 0.3;
-    transition: opacity 0.3s linear;
-    position: absolute;
-    top: 50%;
-    margin-top: math.div(-$clear-size, 2);
-    right: 10px;
+    width: 150px;
+    position: relative;
 
-    &:hover {
-      opacity: 1;
+    input {
+        border: 1px solid #e1e4e8;
+        border-radius: 6px;
+        color: #24292e;
+        background-color: #fafbfc;
+        font-size: 14px;
+        line-height: 20px;
+        outline: none;
+        transition: all 0.3s linear;
+        padding: 5px 12px;
+        width: 100%;
+
+        &::placeholder {
+            color: #a3aab1;
+        }
+        &:not(:disabled):focus {
+            border-color: #0366d6;
+            box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
+            background-color: #ffffff;
+        }
+        &:disabled {
+            background-color: #f3f4f6;
+            color: #959da5;
+        }
     }
-  }
 
-  &:disabled > .clear {
-    display: none;
-  }
+    $clear-size: 18px;
+    &:not(:disabled) > .clear {
+        display: inline-block;
+        width: $clear-size;
+        height: $clear-size;
+        background-image: url(../images/x.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+        opacity: 0.3;
+        transition: opacity 0.3s linear;
+        position: absolute;
+        top: 50%;
+        margin-top: math.div(-$clear-size, 2);
+        right: 10px;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &:disabled > .clear {
+        display: none;
+    }
 }
